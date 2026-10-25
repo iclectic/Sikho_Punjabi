@@ -1,0 +1,329 @@
+{
+  "id": "l1_m1_introducing",
+  "moduleId": "l1_m1",
+  "title": "Introducing yourself",
+  "subtitle": "Names, \"my name is\", and where you're from",
+  "estimatedMinutes": 12,
+  "verificationStatus": "unverified",
+  "sections": [
+    {
+      "type": "intro",
+      "heading": "About this lesson",
+      "body": "Now that you can greet people, the next step is telling them who you are. You will learn to say your name, ask someone else's name, and say where you are from."
+    },
+    {
+      "type": "vocabulary",
+      "heading": "New words",
+      "items": [
+        {
+          "id": "v_mera",
+          "term": {
+            "gurmukhi": "ਮੇਰਾ",
+            "romanised": "mera",
+            "english": "my (masculine)",
+            "audioRef": "l1_m1/mera.mp3"
+          },
+          "partOfSpeech": "possessive",
+          "usageNote": "Changes with gender: meri for feminine words.",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_naan",
+          "term": {
+            "gurmukhi": "ਨਾਮ",
+            "romanised": "naan",
+            "english": "name",
+            "audioRef": "l1_m1/naan.mp3"
+          },
+          "partOfSpeech": "noun (masculine)",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_hai",
+          "term": {
+            "gurmukhi": "ਹੈ",
+            "romanised": "hai",
+            "english": "is",
+            "audioRef": "l1_m1/hai.mp3"
+          },
+          "partOfSpeech": "verb",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_tuhada",
+          "term": {
+            "gurmukhi": "ਤੁਹਾਡਾ",
+            "romanised": "tuhada",
+            "english": "your (polite, masculine)",
+            "audioRef": "l1_m1/tuhada.mp3"
+          },
+          "partOfSpeech": "possessive",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_ki",
+          "term": {
+            "gurmukhi": "ਕੀ",
+            "romanised": "ki",
+            "english": "what",
+            "audioRef": "l1_m1/ki.mp3"
+          },
+          "partOfSpeech": "question word",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_kithon",
+          "term": {
+            "gurmukhi": "ਕਿੱਥੋਂ",
+            "romanised": "kithon",
+            "english": "from where",
+            "audioRef": "l1_m1/kithon.mp3"
+          },
+          "partOfSpeech": "question word",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_ton",
+          "term": {
+            "gurmukhi": "ਤੋਂ",
+            "romanised": "ton",
+            "english": "from",
+            "audioRef": "l1_m1/ton.mp3"
+          },
+          "partOfSpeech": "postposition",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_khushi",
+          "term": {
+            "gurmukhi": "ਖੁਸ਼ੀ",
+            "romanised": "khushi",
+            "english": "happiness",
+            "audioRef": "l1_m1/khushi.mp3"
+          },
+          "partOfSpeech": "noun (feminine)",
+          "verificationStatus": "unverified"
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "heading": "See it in action",
+      "sentences": [
+        {
+          "line": {
+            "gurmukhi": "ਮੇਰਾ ਨਾਮ ਸਿਮਰਨ ਹੈ।",
+            "romanised": "Mera naan Simran hai.",
+            "english": "My name is Simran.",
+            "audioRef": "l1_m1/ex_mera_naan.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਮੇਰਾ", "romanised": "mera", "meaning": "my" },
+            { "gurmukhi": "ਨਾਮ", "romanised": "naan", "meaning": "name" },
+            { "gurmukhi": "ਸਿਮਰਨ", "romanised": "Simran", "meaning": "Simran" },
+            { "gurmukhi": "ਹੈ", "romanised": "hai", "meaning": "is" }
+          ]
+        },
+        {
+          "line": {
+            "gurmukhi": "ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ?",
+            "romanised": "Tuhada naan ki hai?",
+            "english": "What is your name?",
+            "audioRef": "l1_m1/ex_tuhada_naan.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਤੁਹਾਡਾ", "romanised": "tuhada", "meaning": "your (polite)" },
+            { "gurmukhi": "ਨਾਮ", "romanised": "naan", "meaning": "name" },
+            { "gurmukhi": "ਕੀ", "romanised": "ki", "meaning": "what" },
+            { "gurmukhi": "ਹੈ", "romanised": "hai", "meaning": "is" }
+          ]
+        },
+        {
+          "line": {
+            "gurmukhi": "ਤੁਸੀਂ ਕਿੱਥੋਂ ਹੋ?",
+            "romanised": "Tusi kithon ho?",
+            "english": "Where are you from?",
+            "audioRef": "l1_m1/ex_kithon.mp3"
+          }
+        },
+        {
+          "line": {
+            "gurmukhi": "ਮੈਂ ਲੰਡਨ ਤੋਂ ਹਾਂ।",
+            "romanised": "Main London ton haan.",
+            "english": "I am from London.",
+            "audioRef": "l1_m1/ex_london.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਮੈਂ", "romanised": "main", "meaning": "I" },
+            { "gurmukhi": "ਲੰਡਨ", "romanised": "London", "meaning": "London" },
+            { "gurmukhi": "ਤੋਂ", "romanised": "ton", "meaning": "from" },
+            { "gurmukhi": "ਹਾਂ", "romanised": "haan", "meaning": "am" }
+          ]
+        },
+        {
+          "line": {
+            "gurmukhi": "ਤੁਹਾਨੂੰ ਮਿਲ ਕੇ ਖੁਸ਼ੀ ਹੋਈ।",
+            "romanised": "Tuhanu mil ke khushi hoi.",
+            "english": "Nice to meet you.",
+            "audioRef": "l1_m1/ex_nice_to_meet.mp3"
+          },
+          "note": "Literally \"meeting you, happiness happened\" — a set phrase worth memorising."
+        }
+      ]
+    },
+    {
+      "type": "breakdown",
+      "heading": "Sentence breakdown",
+      "sentence": {
+        "line": {
+          "gurmukhi": "ਮੇਰਾ ਨਾਮ ਸਿਮਰਨ ਹੈ।",
+          "romanised": "Mera naan Simran hai.",
+          "english": "My name is Simran."
+        }
+      },
+      "glosses": [
+        { "gurmukhi": "ਮੇਰਾ", "romanised": "mera", "meaning": "my", "grammarNote": "masculine because ਨਾਮ is masculine" },
+        { "gurmukhi": "ਨਾਮ", "romanised": "naan", "meaning": "name", "grammarNote": "noun" },
+        { "gurmukhi": "ਸਿਮਰਨ", "romanised": "Simran", "meaning": "Simran", "grammarNote": "your name goes here" },
+        { "gurmukhi": "ਹੈ", "romanised": "hai", "meaning": "is", "grammarNote": "verb last, as always" }
+      ],
+      "note": "The pattern is: mera naan + [your name] + hai. Swap the name, keep the frame."
+    },
+    {
+      "type": "grammar",
+      "heading": "Gender in Punjabi",
+      "body": "Every Punjabi noun is masculine or feminine. ਨਾਮ (naan, name) is masculine, so \"my\" becomes ਮੇਰਾ (mera). For a feminine noun like ਖੁਸ਼ੀ (khushi), \"my\" would be ਮੇਰੀ (meri).\n\nThe same rule applies to \"your\": ਤੁਹਾਡਾ (tuhada) before a masculine noun, ਤੁਹਾਡੀ (tuhadi) before a feminine one. You will feel this pattern everywhere — Punjabi words constantly adjust to the gender of the noun they describe."
+    },
+    {
+      "type": "whyThisWay",
+      "heading": "Why is it said this way?",
+      "body": "\"Tuhada naan ki hai?\" is literally \"your name what is?\". The verb ਹੈ (hai) sits at the end, and the question word ਕੀ (ki) sits just before it.\n\nNotice also that Punjabi uses postpositions where English uses prepositions: English says \"from London\", Punjabi says \"London ton\" — the marker comes after the place, not before. You saw the same pattern in \"kithon\" (where + from squashed into one word)."
+    },
+    {
+      "type": "conversation",
+      "heading": "A short conversation",
+      "conversation": {
+        "title": "Two people meet at a community event",
+        "context": "Harleen and Davinder introduce themselves.",
+        "lines": [
+          {
+            "speaker": "Harleen",
+            "line": {
+              "gurmukhi": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਮੇਰਾ ਨਾਮ ਹਰਲੀਨ ਹੈ। ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ?",
+              "romanised": "Sat sri akal! Mera naan Harleen hai. Tuhada naan ki hai?",
+              "english": "Hello! My name is Harleen. What is your name?"
+            }
+          },
+          {
+            "speaker": "Davinder",
+            "line": {
+              "gurmukhi": "ਮੇਰਾ ਨਾਮ ਦਵਿੰਦਰ ਹੈ। ਤੁਸੀਂ ਕਿੱਥੋਂ ਹੋ?",
+              "romanised": "Mera naan Davinder hai. Tusi kithon ho?",
+              "english": "My name is Davinder. Where are you from?"
+            }
+          },
+          {
+            "speaker": "Harleen",
+            "line": {
+              "gurmukhi": "ਮੈਂ ਬਰਮਿੰਘਮ ਤੋਂ ਹਾਂ। ਤੁਸੀਂ?",
+              "romanised": "Main Birmingham ton haan. Tusi?",
+              "english": "I am from Birmingham. And you?"
+            }
+          },
+          {
+            "speaker": "Davinder",
+            "line": {
+              "gurmukhi": "ਮੈਂ ਲੁਧਿਆਣੇ ਤੋਂ ਹਾਂ। ਤੁਹਾਨੂੰ ਮਿਲ ਕੇ ਖੁਸ਼ੀ ਹੋਈ।",
+              "romanised": "Main Ludhiane ton haan. Tuhanu mil ke khushi hoi.",
+              "english": "I am from Ludhiana. Nice to meet you."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "exerciseSet",
+      "heading": "Check your understanding",
+      "exercises": [
+        {
+          "type": "multipleChoice",
+          "id": "e_intro_1",
+          "prompt": {
+            "gurmukhi": "ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ?",
+            "romanised": "Tuhada naan ki hai?"
+          },
+          "question": "What is being asked?",
+          "options": [
+            {
+              "id": "a",
+              "line": { "gurmukhi": "Where are you from?", "english": "Where are you from?" }
+            },
+            {
+              "id": "b",
+              "line": { "gurmukhi": "What is your name?", "english": "What is your name?" }
+            },
+            {
+              "id": "c",
+              "line": { "gurmukhi": "How are you?", "english": "How are you?" }
+            }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "type": "arrangeWords",
+          "id": "e_intro_2",
+          "prompt": {
+            "gurmukhi": "My name is ___",
+            "english": "Build the frame: \"My name is ___\""
+          },
+          "tokens": ["ਮੇਰਾ", "ਨਾਮ", "ਹੈ"],
+          "distractors": ["ਤੁਸੀਂ", "ਕੀ"],
+          "explanation": "mera naan + name + hai — the verb ਹੈ stays at the end."
+        },
+        {
+          "type": "fillBlank",
+          "id": "e_intro_3",
+          "prompt": {
+            "gurmukhi": "ਮੈਂ ਲੰਡਨ ___ ਹਾਂ।",
+            "romanised": "Main London ___ haan.",
+            "english": "I am from London."
+          },
+          "question": "Fill in the missing word",
+          "template": "Main London ___ haan.",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "ਤੋਂ", "romanised": "ton", "english": "from" } },
+            { "id": "b", "line": { "gurmukhi": "ਕੀ", "romanised": "ki", "english": "what" } },
+            { "id": "c", "line": { "gurmukhi": "ਹੈ", "romanised": "hai", "english": "is" } }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Punjabi puts the marker after the place: \"London ton\" = \"from London\"."
+        },
+        {
+          "type": "typeTranslation",
+          "id": "e_intro_4",
+          "prompt": {
+            "gurmukhi": "ਤੁਸੀਂ ਕਿੱਥੋਂ ਹੋ?",
+            "romanised": "Tusi kithon ho?"
+          },
+          "acceptedAnswers": [
+            "Where are you from",
+            "Where are you from?",
+            "Where do you come from"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "heading": "Lesson summary",
+      "body": "You can now introduce yourself, ask a name, and say where you are from.",
+      "keyPoints": [
+        "ਮੇਰਾ ਨਾਮ ___ ਹੈ (mera naan ___ hai) — My name is ___",
+        "ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ? (tuhada naan ki hai?) — What is your name?",
+        "ਤੁਸੀਂ ਕਿੱਥੋਂ ਹੋ? (tusi kithon ho?) — Where are you from?",
+        "ਮੈਂ ___ ਤੋਂ ਹਾਂ (main ___ ton haan) — I am from ___",
+        "Punjabi nouns have gender; mera/meri and tuhada/tuhadi change to match"
+      ]
+    }
+  ]
+}
