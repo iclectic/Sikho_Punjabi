@@ -1,0 +1,42 @@
+{
+  "id": "beginner_punjabi",
+  "title": "Beginner Punjabi",
+  "description": "A structured course taking you from no Punjabi to everyday conversations.",
+  "contentVersion": 1,
+  "levels": [
+    {
+      "id": "level_1",
+      "title": "Level 1 · Absolute Beginner",
+      "order": 1,
+      "description": "Greetings, introductions, courtesy, and your first Punjabi sentences.",
+      "modules": [
+        {
+          "id": "l1_m1",
+          "title": "First words",
+          "description": "Say hello, goodbye, and introduce yourself.",
+          "lessons": [
+            {
+              "id": "l1_m1_greetings",
+              "title": "Hello and goodbye",
+              "file": "courses/beginner_punjabi/lessons/greetings.json",
+              "estimatedMinutes": 10
+            },
+            {
+              "id": "l1_m1_introducing",
+              "title": "Introducing yourself",
+              "file": "courses/beginner_punjabi/lessons/introducing_yourself.json",
+              "estimatedMinutes": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "level_2",
+      "title": "Level 2 · Beginner",
+      "order": 2,
+      "description": "Food, family, time, and everyday sentence building. (Coming soon)",
+      "modules": []
+    }
+  ]
+}

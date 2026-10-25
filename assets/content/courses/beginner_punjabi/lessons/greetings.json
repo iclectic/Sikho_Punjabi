@@ -1,0 +1,336 @@
+{
+  "id": "l1_m1_greetings",
+  "moduleId": "l1_m1",
+  "title": "Hello and goodbye",
+  "subtitle": "Your first Punjabi words",
+  "estimatedMinutes": 10,
+  "verificationStatus": "unverified",
+  "sections": [
+    {
+      "type": "intro",
+      "heading": "Welcome",
+      "body": "In this first lesson you will learn how to greet people in Punjabi and say goodbye politely. Punjabi is usually written in the Gurmukhi script — you do not need to read it yet. Every Punjabi word also comes with a romanised spelling so you can start speaking right away."
+    },
+    {
+      "type": "vocabulary",
+      "heading": "New words",
+      "items": [
+        {
+          "id": "v_sat_sri_akal",
+          "term": {
+            "gurmukhi": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
+            "romanised": "sat sri akal",
+            "english": "hello (traditional, respectful greeting)",
+            "audioRef": "l1_m1/sat_sri_akal.mp3"
+          },
+          "partOfSpeech": "greeting",
+          "usageNote": "The most common respectful greeting; literally \"God is truth\".",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_tusi",
+          "term": {
+            "gurmukhi": "ਤੁਸੀਂ",
+            "romanised": "tusi",
+            "english": "you (polite)",
+            "audioRef": "l1_m1/tusi.mp3"
+          },
+          "partOfSpeech": "pronoun",
+          "usageNote": "Use with strangers and elders; \"tū̃\" is informal.",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_kiven",
+          "term": {
+            "gurmukhi": "ਕਿਵੇਂ",
+            "romanised": "kiven",
+            "english": "how",
+            "audioRef": "l1_m1/kiven.mp3"
+          },
+          "partOfSpeech": "question word",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_ho",
+          "term": {
+            "gurmukhi": "ਹੋ",
+            "romanised": "ho",
+            "english": "are (polite form of \"to be\")",
+            "audioRef": "l1_m1/ho.mp3"
+          },
+          "partOfSpeech": "verb",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_theek",
+          "term": {
+            "gurmukhi": "ਠੀਕ",
+            "romanised": "theek",
+            "english": "fine, okay",
+            "audioRef": "l1_m1/theek.mp3"
+          },
+          "partOfSpeech": "adjective",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_haan",
+          "term": {
+            "gurmukhi": "ਹਾਂ",
+            "romanised": "haan",
+            "english": "yes",
+            "audioRef": "l1_m1/haan.mp3"
+          },
+          "partOfSpeech": "particle",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_nahin",
+          "term": {
+            "gurmukhi": "ਨਹੀਂ",
+            "romanised": "nahin",
+            "english": "no, not",
+            "audioRef": "l1_m1/nahin.mp3"
+          },
+          "partOfSpeech": "particle",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_dhannvaad",
+          "term": {
+            "gurmukhi": "ਧੰਨਵਾਦ",
+            "romanised": "dhannvaad",
+            "english": "thank you",
+            "audioRef": "l1_m1/dhannvaad.mp3"
+          },
+          "partOfSpeech": "expression",
+          "usageNote": "Formal; many speakers also say \"thank you\" in English.",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_phir_milange",
+          "term": {
+            "gurmukhi": "ਫਿਰ ਮਿਲਾਂਗੇ",
+            "romanised": "phir milaange",
+            "english": "see you again",
+            "audioRef": "l1_m1/phir_milange.mp3"
+          },
+          "partOfSpeech": "farewell",
+          "verificationStatus": "unverified"
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "heading": "See it in action",
+      "sentences": [
+        {
+          "line": {
+            "gurmukhi": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ!",
+            "romanised": "Sat sri akal!",
+            "english": "Hello!",
+            "audioRef": "l1_m1/ex_sat_sri_akal.mp3"
+          }
+        },
+        {
+          "line": {
+            "gurmukhi": "ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ?",
+            "romanised": "Tusi kiven ho?",
+            "english": "How are you?",
+            "audioRef": "l1_m1/ex_tusi_kiven_ho.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਤੁਸੀਂ", "romanised": "tusi", "meaning": "you (polite)" },
+            { "gurmukhi": "ਕਿਵੇਂ", "romanised": "kiven", "meaning": "how" },
+            { "gurmukhi": "ਹੋ", "romanised": "ho", "meaning": "are" }
+          ]
+        },
+        {
+          "line": {
+            "gurmukhi": "ਮੈਂ ਠੀਕ ਹਾਂ, ਧੰਨਵਾਦ।",
+            "romanised": "Main theek haan, dhannvaad.",
+            "english": "I am fine, thank you.",
+            "audioRef": "l1_m1/ex_main_theek.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਮੈਂ", "romanised": "main", "meaning": "I" },
+            { "gurmukhi": "ਠੀਕ", "romanised": "theek", "meaning": "fine" },
+            { "gurmukhi": "ਹਾਂ", "romanised": "haan", "meaning": "am" },
+            { "gurmukhi": "ਧੰਨਵਾਦ", "romanised": "dhannvaad", "meaning": "thank you" }
+          ]
+        },
+        {
+          "line": {
+            "gurmukhi": "ਠੀਕ ਹੈ, ਫਿਰ ਮਿਲਾਂਗੇ!",
+            "romanised": "Theek hai, phir milaange!",
+            "english": "Okay, see you again!",
+            "audioRef": "l1_m1/ex_phir_milange.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "type": "breakdown",
+      "heading": "Sentence breakdown",
+      "sentence": {
+        "line": {
+          "gurmukhi": "ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ?",
+          "romanised": "Tusi kiven ho?",
+          "english": "How are you?"
+        }
+      },
+      "glosses": [
+        { "gurmukhi": "ਤੁਸੀਂ", "romanised": "tusi", "meaning": "you (polite)", "grammarNote": "subject" },
+        { "gurmukhi": "ਕਿਵੇਂ", "romanised": "kiven", "meaning": "how", "grammarNote": "question word" },
+        { "gurmukhi": "ਹੋ", "romanised": "ho", "meaning": "are", "grammarNote": "verb — always comes last" }
+      ],
+      "note": "Notice that Punjabi puts the verb at the end of the sentence — literally \"you how are?\""
+    },
+    {
+      "type": "grammar",
+      "heading": "A first look at Punjabi grammar",
+      "body": "Punjabi follows a subject–object–verb (SOV) word order: the verb comes last. English says \"you HOW are\" order as \"how are you\", but Punjabi builds the same question as \"tusi (you) kiven (how) ho (are)\".\n\nPunjabi also has two words for \"you\": ਤੁਸੀਂ (tusi) is polite — use it with people you don't know well and with elders. ਤੂੰ (tu) is informal, used with close friends and children. When in doubt, always choose tusi."
+    },
+    {
+      "type": "whyThisWay",
+      "heading": "Why is it said this way?",
+      "body": "\"Sat sri akal\" is more than a hello — it is a short religious greeting meaning roughly \"God is the ultimate truth\", shared across Sikh and wider Punjabi communities. That is why it works in almost every situation: formal, informal, meeting or parting.\n\nAnd \"tusi kiven ho\" puts the verb last because Punjabi sentences are built verb-final. Once you get used to verbs living at the end, Punjabi word order starts to feel natural instead of backwards."
+    },
+    {
+      "type": "conversation",
+      "heading": "A short conversation",
+      "conversation": {
+        "title": "Meeting a neighbour",
+        "context": "Amrit greets her neighbour Baldev in the morning.",
+        "lines": [
+          {
+            "speaker": "Amrit",
+            "line": {
+              "gurmukhi": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ ਜੀ!",
+              "romanised": "Sat sri akal ji!",
+              "english": "Hello! (adding \"ji\" makes it warmer/more respectful)"
+            }
+          },
+          {
+            "speaker": "Baldev",
+            "line": {
+              "gurmukhi": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ?",
+              "romanised": "Sat sri akal! Tusi kiven ho?",
+              "english": "Hello! How are you?"
+            }
+          },
+          {
+            "speaker": "Amrit",
+            "line": {
+              "gurmukhi": "ਮੈਂ ਠੀਕ ਹਾਂ, ਧੰਨਵਾਦ। ਤੁਸੀਂ?",
+              "romanised": "Main theek haan, dhannvaad. Tusi?",
+              "english": "I am fine, thank you. And you?"
+            }
+          },
+          {
+            "speaker": "Baldev",
+            "line": {
+              "gurmukhi": "ਮੈਂ ਵੀ ਠੀਕ ਹਾਂ।",
+              "romanised": "Main vi theek haan.",
+              "english": "I am fine too. (vi = also/too)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "exerciseSet",
+      "heading": "Check your understanding",
+      "exercises": [
+        {
+          "type": "multipleChoice",
+          "id": "e_greet_1",
+          "prompt": {
+            "gurmukhi": "ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ?",
+            "romanised": "Tusi kiven ho?"
+          },
+          "question": "What does this mean?",
+          "options": [
+            {
+              "id": "a",
+              "line": { "gurmukhi": "How are you?", "english": "How are you?" }
+            },
+            {
+              "id": "b",
+              "line": { "gurmukhi": "What is your name?", "english": "What is your name?" }
+            },
+            {
+              "id": "c",
+              "line": { "gurmukhi": "Where are you from?", "english": "Where are you from?" }
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "kiven = how, ho = are. \"You how are?\" → How are you?"
+        },
+        {
+          "type": "arrangeWords",
+          "id": "e_greet_2",
+          "prompt": {
+            "gurmukhi": "How are you? (polite)",
+            "english": "Build the Punjabi sentence for \"How are you?\""
+          },
+          "tokens": ["ਤੁਸੀਂ", "ਕਿਵੇਂ", "ਹੋ"],
+          "distractors": ["ਮੈਂ", "ਹਾਂ"],
+          "explanation": "Punjabi is verb-final: tusi (you) kiven (how) ho (are)."
+        },
+        {
+          "type": "multipleChoice",
+          "id": "e_greet_3",
+          "prompt": {
+            "gurmukhi": "ਧੰਨਵਾਦ",
+            "romanised": "dhannvaad"
+          },
+          "question": "What does this word mean?",
+          "options": [
+            {
+              "id": "a",
+              "line": { "gurmukhi": "please", "english": "please" }
+            },
+            {
+              "id": "b",
+              "line": { "gurmukhi": "thank you", "english": "thank you" }
+            },
+            {
+              "id": "c",
+              "line": { "gurmukhi": "sorry", "english": "sorry" }
+            }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "type": "typeTranslation",
+          "id": "e_greet_4",
+          "prompt": {
+            "gurmukhi": "ਮੈਂ ਠੀਕ ਹਾਂ",
+            "romanised": "Main theek haan"
+          },
+          "acceptedAnswers": [
+            "I am fine",
+            "I'm fine",
+            "I am okay",
+            "I'm okay",
+            "I am well",
+            "I'm well"
+          ],
+          "explanation": "main = I, theek = fine, haan = am."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "heading": "Lesson summary",
+      "body": "You can now greet someone politely, ask how they are, answer, and say goodbye.",
+      "keyPoints": [
+        "ਸਤ ਸ੍ਰੀ ਅਕਾਲ (sat sri akal) — the all-purpose respectful greeting",
+        "ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ? (tusi kiven ho?) — How are you?",
+        "ਮੈਂ ਠੀਕ ਹਾਂ (main theek haan) — I am fine",
+        "Punjabi verbs come at the end of the sentence",
+        "tusi (polite) vs tu (informal) — default to tusi"
+      ]
+    }
+  ]
+}
