@@ -115,6 +115,28 @@ void main() {
       );
     });
 
+    test('listening: correct option id required', () {
+      const exercise = Exercise.listening(
+        id: 'e6',
+        prompt: PunjabiLine(gurmukhi: 'ਸਤ ਸ੍ਰੀ ਅਕਾਲ', audioRef: 'x.mp3'),
+        question: 'What did you hear?',
+        options: [
+          ExerciseOption(
+            id: 'o1',
+            line: PunjabiLine(gurmukhi: 'ਸਤ ਸ੍ਰੀ ਅਕਾਲ'),
+          ),
+          ExerciseOption(
+            id: 'o2',
+            line: PunjabiLine(gurmukhi: 'ਧੰਨਵਾਦ'),
+          ),
+        ],
+        correctOptionId: 'o1',
+      );
+
+      expect(evaluator.evaluate(exercise, const OptionAnswer('o1')), isTrue);
+      expect(evaluator.evaluate(exercise, const OptionAnswer('o2')), isFalse);
+    });
+
     test('mismatched answer type is false', () {
       const exercise = Exercise.multipleChoice(
         id: 'e4',

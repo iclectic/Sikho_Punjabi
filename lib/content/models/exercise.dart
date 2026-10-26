@@ -69,6 +69,17 @@ sealed class Exercise with _$Exercise {
     String? explanation,
   }) = MatchPairsExercise;
 
+  /// Listen to the line's audio (or its transcript when no recording exists)
+  /// and pick the correct option.
+  const factory Exercise.listening({
+    required String id,
+    required PunjabiLine prompt,
+    required String question,
+    required List<ExerciseOption> options,
+    required String correctOptionId,
+    String? explanation,
+  }) = ListeningExercise;
+
   /// Type the English translation of [prompt].
   const factory Exercise.typeTranslation({
     required String id,

@@ -5,6 +5,7 @@ import '../../../content/content_repository.dart';
 import '../../../content/models/gurmukhi_letter.dart';
 import '../../../content/models/gurmukhi_vowel_sign.dart';
 import '../../../core/theme/app_tokens.dart';
+import '../../../shared/widgets/audio_controls.dart';
 import '../../../shared/widgets/punjabi_text.dart';
 import 'letter_practice_screen.dart';
 
@@ -146,11 +147,17 @@ class _LetterGrid extends ConsumerWidget {
               PunjabiText(letter.exampleWord!),
             ],
             const SizedBox(height: AppSpacing.md),
-            Text(
-              'Audio not yet recorded for this letter.',
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                color: Theme.of(context).colorScheme.outline,
-              ),
+            Row(
+              children: [
+                AudioControls(letter.audioRef),
+                const SizedBox(width: AppSpacing.sm),
+                Text(
+                  'Recording pending',
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: Theme.of(context).colorScheme.outline,
+                  ),
+                ),
+              ],
             ),
           ],
         ),

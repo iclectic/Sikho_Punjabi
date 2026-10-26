@@ -124,6 +124,30 @@ Map<String, dynamic> _$MatchPairsExerciseToJson(MatchPairsExercise instance) =>
       'type': instance.$type,
     };
 
+ListeningExercise _$ListeningExerciseFromJson(Map<String, dynamic> json) =>
+    ListeningExercise(
+      id: json['id'] as String,
+      prompt: PunjabiLine.fromJson(json['prompt'] as Map<String, dynamic>),
+      question: json['question'] as String,
+      options: (json['options'] as List<dynamic>)
+          .map((e) => ExerciseOption.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      correctOptionId: json['correctOptionId'] as String,
+      explanation: json['explanation'] as String?,
+      $type: json['type'] as String?,
+    );
+
+Map<String, dynamic> _$ListeningExerciseToJson(ListeningExercise instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'prompt': instance.prompt,
+      'question': instance.question,
+      'options': instance.options,
+      'correctOptionId': instance.correctOptionId,
+      'explanation': instance.explanation,
+      'type': instance.$type,
+    };
+
 TypeTranslationExercise _$TypeTranslationExerciseFromJson(
   Map<String, dynamic> json,
 ) => TypeTranslationExercise(

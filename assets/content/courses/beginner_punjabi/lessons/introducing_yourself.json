@@ -299,6 +299,45 @@
           "explanation": "Punjabi puts the marker after the place: \"London ton\" = \"from London\"."
         },
         {
+          "type": "listening",
+          "id": "e_intro_5",
+          "prompt": {
+            "gurmukhi": "ਮੇਰਾ ਨਾਮ ਸਿਮਰਨ ਹੈ",
+            "romanised": "mera naam simran hai",
+            "english": "My name is Simran",
+            "audioRef": "intro_simran.mp3"
+          },
+          "question": "What did you hear?",
+          "options": [
+            {
+              "id": "o1",
+              "line": {
+                "gurmukhi": "ਮੇਰਾ ਨਾਮ ਸਿਮਰਨ ਹੈ",
+                "romanised": "mera naam simran hai",
+                "english": "My name is Simran"
+              }
+            },
+            {
+              "id": "o2",
+              "line": {
+                "gurmukhi": "ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ?",
+                "romanised": "tuhaada naam ki hai?",
+                "english": "What is your name?"
+              }
+            },
+            {
+              "id": "o3",
+              "line": {
+                "gurmukhi": "ਮੈਂ ਠੀਕ ਹਾਂ, ਧੰਨਵਾਦ",
+                "romanised": "main theek haan, dhannvaad",
+                "english": "I am fine, thank you"
+              }
+            }
+          ],
+          "correctOptionId": "o1",
+          "explanation": "mera naam ___ hai — 'my name ___ is'."
+        },
+        {
           "type": "typeTranslation",
           "id": "e_intro_4",
           "prompt": {

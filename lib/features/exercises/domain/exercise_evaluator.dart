@@ -35,6 +35,7 @@ class ExerciseEvaluator {
       (MultipleChoiceExercise e, OptionAnswer a) =>
         a.optionId == e.correctOptionId,
       (FillBlankExercise e, OptionAnswer a) => a.optionId == e.correctOptionId,
+      (ListeningExercise e, OptionAnswer a) => a.optionId == e.correctOptionId,
       (ArrangeWordsExercise e, TokenSequenceAnswer a) => _tokensEqual(
         a.tokens,
         e.tokens,

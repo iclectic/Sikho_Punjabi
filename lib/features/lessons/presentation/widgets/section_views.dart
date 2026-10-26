@@ -4,6 +4,7 @@ import '../../../../content/models/lesson.dart';
 import '../../../../content/models/vocabulary_item.dart';
 import '../../../../content/models/word_gloss.dart';
 import '../../../../core/theme/app_tokens.dart';
+import '../../../../shared/widgets/audio_controls.dart';
 import '../../../../shared/widgets/punjabi_text.dart';
 import '../../../exercises/presentation/exercise_runner.dart';
 
@@ -35,7 +36,13 @@ class SectionView extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      PunjabiText(sentence.line),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(child: PunjabiText(sentence.line)),
+                          AudioControls(sentence.line.audioRef),
+                        ],
+                      ),
                       if (sentence.glosses.isNotEmpty) ...[
                         const SizedBox(height: AppSpacing.sm),
                         _GlossRow(glosses: sentence.glosses),
@@ -101,7 +108,13 @@ class SectionView extends StatelessWidget {
                         style: Theme.of(context).textTheme.labelLarge,
                       ),
                       const SizedBox(height: AppSpacing.xs),
-                      PunjabiText(line.line),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(child: PunjabiText(line.line)),
+                          AudioControls(line.line.audioRef),
+                        ],
+                      ),
                     ],
                   ),
                 ),
@@ -159,6 +172,7 @@ class _VocabTile extends StatelessWidget {
       child: ListTile(
         title: PunjabiText(item.term),
         subtitle: subtitle.isEmpty ? null : Text(subtitle),
+        trailing: AudioControls(item.term.audioRef),
       ),
     );
   }

@@ -635,6 +635,10 @@ Exercise _$ExerciseFromJson(
           return MatchPairsExercise.fromJson(
             json
           );
+                case 'listening':
+          return ListeningExercise.fromJson(
+            json
+          );
                 case 'typeTranslation':
           return TypeTranslationExercise.fromJson(
             json
@@ -734,14 +738,15 @@ extension ExercisePatterns on Exercise {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( MultipleChoiceExercise value)?  multipleChoice,TResult Function( ArrangeWordsExercise value)?  arrangeWords,TResult Function( FillBlankExercise value)?  fillBlank,TResult Function( MatchPairsExercise value)?  matchPairs,TResult Function( TypeTranslationExercise value)?  typeTranslation,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( MultipleChoiceExercise value)?  multipleChoice,TResult Function( ArrangeWordsExercise value)?  arrangeWords,TResult Function( FillBlankExercise value)?  fillBlank,TResult Function( MatchPairsExercise value)?  matchPairs,TResult Function( ListeningExercise value)?  listening,TResult Function( TypeTranslationExercise value)?  typeTranslation,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case MultipleChoiceExercise() when multipleChoice != null:
 return multipleChoice(_that);case ArrangeWordsExercise() when arrangeWords != null:
 return arrangeWords(_that);case FillBlankExercise() when fillBlank != null:
 return fillBlank(_that);case MatchPairsExercise() when matchPairs != null:
-return matchPairs(_that);case TypeTranslationExercise() when typeTranslation != null:
+return matchPairs(_that);case ListeningExercise() when listening != null:
+return listening(_that);case TypeTranslationExercise() when typeTranslation != null:
 return typeTranslation(_that);case _:
   return orElse();
 
@@ -760,14 +765,15 @@ return typeTranslation(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( MultipleChoiceExercise value)  multipleChoice,required TResult Function( ArrangeWordsExercise value)  arrangeWords,required TResult Function( FillBlankExercise value)  fillBlank,required TResult Function( MatchPairsExercise value)  matchPairs,required TResult Function( TypeTranslationExercise value)  typeTranslation,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( MultipleChoiceExercise value)  multipleChoice,required TResult Function( ArrangeWordsExercise value)  arrangeWords,required TResult Function( FillBlankExercise value)  fillBlank,required TResult Function( MatchPairsExercise value)  matchPairs,required TResult Function( ListeningExercise value)  listening,required TResult Function( TypeTranslationExercise value)  typeTranslation,}){
 final _that = this;
 switch (_that) {
 case MultipleChoiceExercise():
 return multipleChoice(_that);case ArrangeWordsExercise():
 return arrangeWords(_that);case FillBlankExercise():
 return fillBlank(_that);case MatchPairsExercise():
-return matchPairs(_that);case TypeTranslationExercise():
+return matchPairs(_that);case ListeningExercise():
+return listening(_that);case TypeTranslationExercise():
 return typeTranslation(_that);}
 }
 /// A variant of `map` that fallback to returning `null`.
@@ -782,14 +788,15 @@ return typeTranslation(_that);}
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( MultipleChoiceExercise value)?  multipleChoice,TResult? Function( ArrangeWordsExercise value)?  arrangeWords,TResult? Function( FillBlankExercise value)?  fillBlank,TResult? Function( MatchPairsExercise value)?  matchPairs,TResult? Function( TypeTranslationExercise value)?  typeTranslation,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( MultipleChoiceExercise value)?  multipleChoice,TResult? Function( ArrangeWordsExercise value)?  arrangeWords,TResult? Function( FillBlankExercise value)?  fillBlank,TResult? Function( MatchPairsExercise value)?  matchPairs,TResult? Function( ListeningExercise value)?  listening,TResult? Function( TypeTranslationExercise value)?  typeTranslation,}){
 final _that = this;
 switch (_that) {
 case MultipleChoiceExercise() when multipleChoice != null:
 return multipleChoice(_that);case ArrangeWordsExercise() when arrangeWords != null:
 return arrangeWords(_that);case FillBlankExercise() when fillBlank != null:
 return fillBlank(_that);case MatchPairsExercise() when matchPairs != null:
-return matchPairs(_that);case TypeTranslationExercise() when typeTranslation != null:
+return matchPairs(_that);case ListeningExercise() when listening != null:
+return listening(_that);case TypeTranslationExercise() when typeTranslation != null:
 return typeTranslation(_that);case _:
   return null;
 
@@ -807,13 +814,14 @@ return typeTranslation(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id,  PunjabiLine prompt,  String question,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)?  multipleChoice,TResult Function( String id,  PunjabiLine prompt,  List<String> tokens,  List<String> distractors,  String? explanation)?  arrangeWords,TResult Function( String id,  PunjabiLine prompt,  String template,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)?  fillBlank,TResult Function( String id,  String instructions,  List<MatchPair> pairs,  String? explanation)?  matchPairs,TResult Function( String id,  PunjabiLine prompt,  List<String> acceptedAnswers,  String? explanation)?  typeTranslation,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String id,  PunjabiLine prompt,  String question,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)?  multipleChoice,TResult Function( String id,  PunjabiLine prompt,  List<String> tokens,  List<String> distractors,  String? explanation)?  arrangeWords,TResult Function( String id,  PunjabiLine prompt,  String template,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)?  fillBlank,TResult Function( String id,  String instructions,  List<MatchPair> pairs,  String? explanation)?  matchPairs,TResult Function( String id,  PunjabiLine prompt,  String question,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)?  listening,TResult Function( String id,  PunjabiLine prompt,  List<String> acceptedAnswers,  String? explanation)?  typeTranslation,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case MultipleChoiceExercise() when multipleChoice != null:
 return multipleChoice(_that.id,_that.prompt,_that.question,_that.options,_that.correctOptionId,_that.explanation);case ArrangeWordsExercise() when arrangeWords != null:
 return arrangeWords(_that.id,_that.prompt,_that.tokens,_that.distractors,_that.explanation);case FillBlankExercise() when fillBlank != null:
 return fillBlank(_that.id,_that.prompt,_that.template,_that.options,_that.correctOptionId,_that.explanation);case MatchPairsExercise() when matchPairs != null:
-return matchPairs(_that.id,_that.instructions,_that.pairs,_that.explanation);case TypeTranslationExercise() when typeTranslation != null:
+return matchPairs(_that.id,_that.instructions,_that.pairs,_that.explanation);case ListeningExercise() when listening != null:
+return listening(_that.id,_that.prompt,_that.question,_that.options,_that.correctOptionId,_that.explanation);case TypeTranslationExercise() when typeTranslation != null:
 return typeTranslation(_that.id,_that.prompt,_that.acceptedAnswers,_that.explanation);case _:
   return orElse();
 
@@ -832,13 +840,14 @@ return typeTranslation(_that.id,_that.prompt,_that.acceptedAnswers,_that.explana
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id,  PunjabiLine prompt,  String question,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)  multipleChoice,required TResult Function( String id,  PunjabiLine prompt,  List<String> tokens,  List<String> distractors,  String? explanation)  arrangeWords,required TResult Function( String id,  PunjabiLine prompt,  String template,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)  fillBlank,required TResult Function( String id,  String instructions,  List<MatchPair> pairs,  String? explanation)  matchPairs,required TResult Function( String id,  PunjabiLine prompt,  List<String> acceptedAnswers,  String? explanation)  typeTranslation,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String id,  PunjabiLine prompt,  String question,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)  multipleChoice,required TResult Function( String id,  PunjabiLine prompt,  List<String> tokens,  List<String> distractors,  String? explanation)  arrangeWords,required TResult Function( String id,  PunjabiLine prompt,  String template,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)  fillBlank,required TResult Function( String id,  String instructions,  List<MatchPair> pairs,  String? explanation)  matchPairs,required TResult Function( String id,  PunjabiLine prompt,  String question,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)  listening,required TResult Function( String id,  PunjabiLine prompt,  List<String> acceptedAnswers,  String? explanation)  typeTranslation,}) {final _that = this;
 switch (_that) {
 case MultipleChoiceExercise():
 return multipleChoice(_that.id,_that.prompt,_that.question,_that.options,_that.correctOptionId,_that.explanation);case ArrangeWordsExercise():
 return arrangeWords(_that.id,_that.prompt,_that.tokens,_that.distractors,_that.explanation);case FillBlankExercise():
 return fillBlank(_that.id,_that.prompt,_that.template,_that.options,_that.correctOptionId,_that.explanation);case MatchPairsExercise():
-return matchPairs(_that.id,_that.instructions,_that.pairs,_that.explanation);case TypeTranslationExercise():
+return matchPairs(_that.id,_that.instructions,_that.pairs,_that.explanation);case ListeningExercise():
+return listening(_that.id,_that.prompt,_that.question,_that.options,_that.correctOptionId,_that.explanation);case TypeTranslationExercise():
 return typeTranslation(_that.id,_that.prompt,_that.acceptedAnswers,_that.explanation);}
 }
 /// A variant of `when` that fallback to returning `null`
@@ -853,13 +862,14 @@ return typeTranslation(_that.id,_that.prompt,_that.acceptedAnswers,_that.explana
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id,  PunjabiLine prompt,  String question,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)?  multipleChoice,TResult? Function( String id,  PunjabiLine prompt,  List<String> tokens,  List<String> distractors,  String? explanation)?  arrangeWords,TResult? Function( String id,  PunjabiLine prompt,  String template,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)?  fillBlank,TResult? Function( String id,  String instructions,  List<MatchPair> pairs,  String? explanation)?  matchPairs,TResult? Function( String id,  PunjabiLine prompt,  List<String> acceptedAnswers,  String? explanation)?  typeTranslation,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String id,  PunjabiLine prompt,  String question,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)?  multipleChoice,TResult? Function( String id,  PunjabiLine prompt,  List<String> tokens,  List<String> distractors,  String? explanation)?  arrangeWords,TResult? Function( String id,  PunjabiLine prompt,  String template,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)?  fillBlank,TResult? Function( String id,  String instructions,  List<MatchPair> pairs,  String? explanation)?  matchPairs,TResult? Function( String id,  PunjabiLine prompt,  String question,  List<ExerciseOption> options,  String correctOptionId,  String? explanation)?  listening,TResult? Function( String id,  PunjabiLine prompt,  List<String> acceptedAnswers,  String? explanation)?  typeTranslation,}) {final _that = this;
 switch (_that) {
 case MultipleChoiceExercise() when multipleChoice != null:
 return multipleChoice(_that.id,_that.prompt,_that.question,_that.options,_that.correctOptionId,_that.explanation);case ArrangeWordsExercise() when arrangeWords != null:
 return arrangeWords(_that.id,_that.prompt,_that.tokens,_that.distractors,_that.explanation);case FillBlankExercise() when fillBlank != null:
 return fillBlank(_that.id,_that.prompt,_that.template,_that.options,_that.correctOptionId,_that.explanation);case MatchPairsExercise() when matchPairs != null:
-return matchPairs(_that.id,_that.instructions,_that.pairs,_that.explanation);case TypeTranslationExercise() when typeTranslation != null:
+return matchPairs(_that.id,_that.instructions,_that.pairs,_that.explanation);case ListeningExercise() when listening != null:
+return listening(_that.id,_that.prompt,_that.question,_that.options,_that.correctOptionId,_that.explanation);case TypeTranslationExercise() when typeTranslation != null:
 return typeTranslation(_that.id,_that.prompt,_that.acceptedAnswers,_that.explanation);case _:
   return null;
 
@@ -1257,6 +1267,106 @@ as String?,
 }
 
 
+}
+
+/// @nodoc
+@JsonSerializable()
+
+class ListeningExercise implements Exercise {
+  const ListeningExercise({required this.id, required this.prompt, required this.question, required  List<ExerciseOption> options, required this.correctOptionId, this.explanation,  String? $type}): _options = options,$type = $type ?? 'listening';
+  factory ListeningExercise.fromJson(Map<String, dynamic> json) => _$ListeningExerciseFromJson(json);
+
+@override final  String id;
+ final  PunjabiLine prompt;
+ final  String question;
+ final  List<ExerciseOption> _options;
+ List<ExerciseOption> get options {
+  if (_options is EqualUnmodifiableListView) return _options;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_options);
+}
+
+ final  String correctOptionId;
+@override final  String? explanation;
+
+@JsonKey(name: 'type')
+final String $type;
+
+
+/// Create a copy of Exercise
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ListeningExerciseCopyWith<ListeningExercise> get copyWith => _$ListeningExerciseCopyWithImpl<ListeningExercise>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ListeningExerciseToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is ListeningExercise&&(identical(other.id, id) || other.id == id)&&(identical(other.prompt, prompt) || other.prompt == prompt)&&(identical(other.question, question) || other.question == question)&&const DeepCollectionEquality().equals(other.options, _options)&&(identical(other.correctOptionId, correctOptionId) || other.correctOptionId == correctOptionId)&&(identical(other.explanation, explanation) || other.explanation == explanation));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,id,prompt,question,const DeepCollectionEquality().hash(_options),correctOptionId,explanation);
+}
+
+@override
+String toString() {
+    return 'Exercise.listening(id: $id, prompt: $prompt, question: $question, options: $options, correctOptionId: $correctOptionId, explanation: $explanation)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $ListeningExerciseCopyWith<$Res> implements $ExerciseCopyWith<$Res> {
+  factory $ListeningExerciseCopyWith(ListeningExercise value, $Res Function(ListeningExercise) _then) = _$ListeningExerciseCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, PunjabiLine prompt, String question, List<ExerciseOption> options, String correctOptionId, String? explanation
+});
+
+
+$PunjabiLineCopyWith<$Res> get prompt;
+
+}
+/// @nodoc
+class _$ListeningExerciseCopyWithImpl<$Res>
+    implements $ListeningExerciseCopyWith<$Res> {
+  _$ListeningExerciseCopyWithImpl(this._self, this._then);
+
+  final ListeningExercise _self;
+  final $Res Function(ListeningExercise) _then;
+
+/// Create a copy of Exercise
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? prompt = null,Object? question = null,Object? options = null,Object? correctOptionId = null,Object? explanation = freezed,}) {
+  return _then(ListeningExercise(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,prompt: null == prompt ? _self.prompt : prompt // ignore: cast_nullable_to_non_nullable
+as PunjabiLine,question: null == question ? _self.question : question // ignore: cast_nullable_to_non_nullable
+as String,options: null == options ? _self._options : options // ignore: cast_nullable_to_non_nullable
+as List<ExerciseOption>,correctOptionId: null == correctOptionId ? _self.correctOptionId : correctOptionId // ignore: cast_nullable_to_non_nullable
+as String,explanation: freezed == explanation ? _self.explanation : explanation // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+/// Create a copy of Exercise
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$PunjabiLineCopyWith<$Res> get prompt {
+  
+  return $PunjabiLineCopyWith<$Res>(_self.prompt, (value) {
+    return _then(_self.copyWith(prompt: value));
+  });
+}
 }
 
 /// @nodoc

@@ -7,6 +7,7 @@ import '../../../core/theme/app_tokens.dart';
 import '../application/exercise_providers.dart';
 import '../domain/exercise_evaluator.dart';
 import 'widgets/arrange_words_exercise_view.dart';
+import 'widgets/listening_exercise_view.dart';
 import 'widgets/match_pairs_exercise_view.dart';
 import 'widgets/option_exercise_view.dart';
 import 'widgets/type_translation_exercise_view.dart';
@@ -162,6 +163,7 @@ class _ExerciseCardState extends State<_ExerciseCard> {
       FillBlankExercise e => e.explanation,
       MatchPairsExercise e => e.explanation,
       TypeTranslationExercise e => e.explanation,
+      ListeningExercise e => e.explanation,
     };
 
     return Card(
@@ -200,6 +202,14 @@ class _ExerciseCardState extends State<_ExerciseCard> {
                 instructions: e.instructions,
                 pairs: e.pairs,
                 onSubmit: (map) => _submit(PairingAnswer(map)),
+              ),
+              ListeningExercise e => OptionExerciseView(
+                key: ValueKey('li-$_attempt'),
+                prompt: e.prompt,
+                promptOverride: ListeningExerciseView(prompt: e.prompt),
+                question: e.question,
+                options: e.options,
+                onSubmit: (id) => _submit(OptionAnswer(id)),
               ),
             },
             if (_correct != null) ...[

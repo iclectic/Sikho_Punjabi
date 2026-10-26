@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -20,8 +21,13 @@ class JustAudioService implements AudioService {
 
   @override
   Future<bool> hasAudio(String? audioRef) async {
-    // No bundled recordings yet; refs exist in content for future use.
-    return false;
+    if (audioRef == null || audioRef.isEmpty) return false;
+    try {
+      await rootBundle.load('assets/audio/$audioRef');
+      return true;
+    } catch (_) {
+      return false;
+    }
   }
 
   @override

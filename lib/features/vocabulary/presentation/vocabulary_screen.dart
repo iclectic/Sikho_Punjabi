@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 
 import '../../../core/database/app_database.dart';
 import '../../../core/theme/app_tokens.dart';
+import '../../../shared/widgets/audio_controls.dart';
 import '../../courses/application/course_queries.dart';
 import '../../settings/domain/settings.dart';
 import '../application/vocabulary_providers.dart';
@@ -184,12 +185,18 @@ class _VocabularyScreenState extends ConsumerState<VocabularyScreen> {
                 card.easeFactor.toStringAsFixed(2),
               ),
               const SizedBox(height: AppSpacing.lg),
-              Text(
-                'Audio not yet recorded for this word.',
-                textAlign: TextAlign.center,
-                style: Theme.of(
-                  context,
-                ).textTheme.bodySmall?.copyWith(color: scheme.outline),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  AudioControls(card.audioRef),
+                  const SizedBox(width: AppSpacing.sm),
+                  Text(
+                    'Recording pending',
+                    style: Theme.of(
+                      context,
+                    ).textTheme.bodySmall?.copyWith(color: scheme.outline),
+                  ),
+                ],
               ),
               const SizedBox(height: AppSpacing.md),
               OutlinedButton.icon(

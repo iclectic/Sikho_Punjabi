@@ -13,10 +13,15 @@ class OptionExerciseView extends StatefulWidget {
     required this.question,
     required this.options,
     required this.onSubmit,
+    this.promptOverride,
     super.key,
   });
 
   final PunjabiLine prompt;
+
+  /// Replaces the default [PunjabiText] prompt — e.g. the audio player card
+  /// for listening exercises, where showing text would give the answer away.
+  final Widget? promptOverride;
   final String question;
   final List<ExerciseOption> options;
   final ValueChanged<String> onSubmit;
@@ -36,7 +41,7 @@ class _OptionExerciseViewState extends State<OptionExerciseView> {
       children: [
         Text(widget.question, style: Theme.of(context).textTheme.titleMedium),
         const SizedBox(height: AppSpacing.sm),
-        PunjabiText(widget.prompt),
+        widget.promptOverride ?? PunjabiText(widget.prompt),
         const SizedBox(height: AppSpacing.md),
         for (final option in widget.options)
           Padding(
