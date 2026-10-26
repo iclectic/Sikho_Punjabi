@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'models/course.dart';
 import 'models/gurmukhi_letter.dart';
+import 'models/gurmukhi_vowel_sign.dart';
 import 'models/lesson.dart';
 
 /// Contract for course content. Implementations may read bundled assets
@@ -14,6 +15,7 @@ abstract interface class ContentRepository {
   Future<Course> getCourse();
   Future<Lesson> getLesson(String lessonId);
   Future<List<GurmukhiLetter>> getGurmukhiLetters();
+  Future<List<GurmukhiVowelSign>> getGurmukhiVowelSigns();
 }
 
 class ContentNotFoundException implements Exception {
@@ -79,6 +81,14 @@ class AssetContentRepository implements ContentRepository {
         .toList();
     return _lettersCache = list;
   }
+
+  @override
+  Future<List<GurmukhiVowelSign>> getGurmukhiVowelSigns() async {
+    final json = await _readJson(_gurmukhiPath);
+    return ((json['vowelSigns'] as List<dynamic>?) ?? const [])
+        .map((e) => GurmukhiVowelSign.fromJson(e as Map<String, dynamic>))
+        .toList();
+  }
 }
 
 final contentRepositoryProvider = Provider<ContentRepository>(
@@ -95,4 +105,8 @@ final lessonProvider = FutureProvider.family<Lesson, String>(
 
 final gurmukhiLettersProvider = FutureProvider<List<GurmukhiLetter>>(
   (ref) => ref.watch(contentRepositoryProvider).getGurmukhiLetters(),
+);
+
+final gurmukhiVowelSignsProvider = FutureProvider<List<GurmukhiVowelSign>>(
+  (ref) => ref.watch(contentRepositoryProvider).getGurmukhiVowelSigns(),
 );

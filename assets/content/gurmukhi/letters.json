@@ -37,5 +37,17 @@
     { "id": "lalla", "letter": "ਲ", "name": "lalla", "soundRomanised": "l (as in 'love')" },
     { "id": "vava", "letter": "ਵ", "name": "vava", "soundRomanised": "v (soft v/w, lips nearly touch)" },
     { "id": "rara_duplex", "letter": "ੜ", "name": "rara (hard r)", "soundRomanised": "ṛ (flapped retroflex r)" }
+  ],
+  "vowelSigns": [
+    { "id": "mukta", "sign": "", "name": "mukta", "soundRomanised": "a (inherent vowel, no sign)", "exampleForm": "ਸ" },
+    { "id": "kanna", "sign": "ਾ", "name": "kanna", "soundRomanised": "aa (as in 'father')", "exampleForm": "ਸਾ" },
+    { "id": "sihari", "sign": "ਿ", "name": "sihari", "soundRomanised": "i (as in 'sit')", "exampleForm": "ਸਿ" },
+    { "id": "bihari", "sign": "ੀ", "name": "bihari", "soundRomanised": "ee (as in 'see')", "exampleForm": "ਸੀ" },
+    { "id": "aunkar", "sign": "ੁ", "name": "aunkar", "soundRomanised": "u (as in 'put')", "exampleForm": "ਸੁ" },
+    { "id": "dulainkar", "sign": "ੂ", "name": "dulainkar", "soundRomanised": "oo (as in 'food')", "exampleForm": "ਸੂ" },
+    { "id": "lava", "sign": "ੇ", "name": "lava", "soundRomanised": "e (as in 'say')", "exampleForm": "ਸੇ" },
+    { "id": "dulava", "sign": "ੈ", "name": "dulava", "soundRomanised": "ai (as in 'sad')", "exampleForm": "ਸੈ" },
+    { "id": "hora", "sign": "ੋ", "name": "hora", "soundRomanised": "o (as in 'go')", "exampleForm": "ਸੋ" },
+    { "id": "kanaura", "sign": "ੌ", "name": "kanaura", "soundRomanised": "au (as in 'caught')", "exampleForm": "ਸੌ" }
   ]
 }
