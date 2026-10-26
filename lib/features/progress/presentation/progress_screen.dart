@@ -5,10 +5,7 @@ import '../../../content/content_repository.dart';
 import '../../../core/database/app_database.dart';
 import '../../../core/theme/app_tokens.dart';
 import '../../learn/presentation/learn_screen.dart';
-
-final _sessionsProvider = StreamProvider<List<StudySessionsTableData>>(
-  (ref) => ref.watch(appDatabaseProvider).watchStudySessions(),
-);
+import '../application/study_stats_provider.dart';
 
 final _flashcardCountProvider = StreamProvider<int>(
   (ref) => ref
@@ -26,7 +23,7 @@ class ProgressScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final course = ref.watch(courseProvider).value;
     final progress = ref.watch(lessonProgressListProvider).value ?? [];
-    final sessions = ref.watch(_sessionsProvider).value ?? [];
+    final stats = ref.watch(studyStatsProvider);
     final vocabCount = ref.watch(_flashcardCountProvider).value ?? 0;
 
     final total = course == null
@@ -36,16 +33,6 @@ class ProgressScreen extends ConsumerWidget {
               .expand((m) => m.lessons)
               .length;
     final completed = progress.where((p) => p.completed).length;
-    final totalSeconds = sessions.fold<int>(
-      0,
-      (sum, s) => sum + s.durationSeconds,
-    );
-    final studyDays = sessions
-        .map(
-          (s) => DateTime(s.startedAt.year, s.startedAt.month, s.startedAt.day),
-        )
-        .toSet()
-        .length;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Progress')),
@@ -59,6 +46,11 @@ class ProgressScreen extends ConsumerWidget {
             progress: total == 0 ? null : completed / total,
           ),
           _StatTile(
+            icon: Icons.local_fire_department_outlined,
+            label: 'Current streak',
+            value: '${stats.streak} day${stats.streak == 1 ? '' : 's'}',
+          ),
+          _StatTile(
             icon: Icons.style,
             label: 'Words in review',
             value: '$vocabCount',
@@ -66,12 +58,12 @@ class ProgressScreen extends ConsumerWidget {
           _StatTile(
             icon: Icons.calendar_month,
             label: 'Days studied',
-            value: '$studyDays',
+            value: '${stats.daysStudied}',
           ),
           _StatTile(
             icon: Icons.schedule,
             label: 'Total study time',
-            value: _formatDuration(totalSeconds),
+            value: _formatDuration(stats.totalSeconds),
           ),
         ],
       ),

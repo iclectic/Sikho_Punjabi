@@ -7,6 +7,7 @@ import '../../../content/content_repository.dart';
 import '../../../content/models/course.dart';
 import '../../../core/database/app_database.dart';
 import '../../../core/theme/app_tokens.dart';
+import '../../progress/application/study_stats_provider.dart';
 import '../../review/application/review_providers.dart';
 
 final lessonProgressListProvider =
@@ -40,6 +41,17 @@ class LearnScreen extends ConsumerWidget {
         data: (course) => ListView(
           padding: AppSpacing.screenPadding,
           children: [
+            Text(
+              'ਸਤ ਸ੍ਰੀ ਅਕਾਲ',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            Text(
+              'Sat sri akal — ready to learn?',
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            const SizedBox(height: AppSpacing.md),
+            const _StatsRow(),
+            const SizedBox(height: AppSpacing.lg),
             _ContinueLearningCard(
               course: course,
               progress: progress.value ?? const [],
@@ -68,6 +80,45 @@ class LearnScreen extends ConsumerWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+/// Compact stat chips: current streak, words in review, cards due.
+/// Deliberately honest numbers — no badges, no pressure mechanics.
+class _StatsRow extends ConsumerWidget {
+  const _StatsRow();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final stats = ref.watch(studyStatsProvider);
+    final dueCount = ref.watch(dueFlashcardCountProvider);
+
+    return Row(
+      children: [
+        _StatChip(
+          icon: Icons.local_fire_department_outlined,
+          label: '${stats.streak} day${stats.streak == 1 ? '' : 's'}',
+        ),
+        const SizedBox(width: AppSpacing.sm),
+        _StatChip(icon: Icons.style_outlined, label: '$dueCount due'),
+      ],
+    );
+  }
+}
+
+class _StatChip extends StatelessWidget {
+  const _StatChip({required this.icon, required this.label});
+
+  final IconData icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Chip(
+      avatar: Icon(icon, size: 18),
+      label: Text(label),
+      visualDensity: VisualDensity.compact,
     );
   }
 }

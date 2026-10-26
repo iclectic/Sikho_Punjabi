@@ -5,11 +5,14 @@ import 'package:go_router/go_router.dart';
 import '../features/gurmukhi/presentation/gurmukhi_screen.dart';
 import '../features/learn/presentation/learn_screen.dart';
 import '../features/lessons/presentation/lesson_screen.dart';
+import '../features/onboarding/application/onboarding_provider.dart';
+import '../features/onboarding/presentation/onboarding_screen.dart';
 import '../features/progress/presentation/progress_screen.dart';
 import '../features/review/presentation/review_screen.dart';
 import '../features/settings/presentation/settings_screen.dart';
 
 abstract final class AppRoutes {
+  static const onboarding = '/onboarding';
   static const learn = '/learn';
   static const review = '/review';
   static const gurmukhi = '/gurmukhi';
@@ -24,7 +27,19 @@ final appRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
     navigatorKey: rootNavigatorKey,
     initialLocation: AppRoutes.learn,
+    redirect: (context, state) {
+      final onboarded = ref.read(onboardingCompletedProvider);
+      final onOnboarding = state.matchedLocation == AppRoutes.onboarding;
+      if (!onboarded && !onOnboarding) return AppRoutes.onboarding;
+      if (onboarded && onOnboarding) return AppRoutes.learn;
+      return null;
+    },
     routes: [
+      GoRoute(
+        path: AppRoutes.onboarding,
+        parentNavigatorKey: rootNavigatorKey,
+        builder: (context, state) => const OnboardingScreen(),
+      ),
       StatefulShellRoute.indexedStack(
         builder: (context, state, navigationShell) =>
             _AppShell(navigationShell: navigationShell),
