@@ -112,7 +112,13 @@ final dueForecastProvider = Provider<List<int>>((ref) {
   final today = DateTime.now();
   final startOfToday = DateTime(today.year, today.month, today.day);
   for (final card in cards) {
-    var day = card.dueAt.difference(startOfToday).inDays;
+    final due = card.dueAt;
+    // Normalise to calendar dates — Duration.inDays truncates toward zero.
+    var day = DateTime(
+      due.year,
+      due.month,
+      due.day,
+    ).difference(startOfToday).inDays;
     if (day < 0) day = 0; // overdue counts as today
     if (day < counts.length) counts[day]++;
   }
