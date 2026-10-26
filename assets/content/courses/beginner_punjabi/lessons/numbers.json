@@ -1,0 +1,334 @@
+{
+  "id": "l1_m2_numbers",
+  "moduleId": "l1_m2",
+  "title": "Numbers 1–10",
+  "subtitle": "Counting in Punjabi",
+  "estimatedMinutes": 12,
+  "verificationStatus": "unverified",
+  "sections": [
+    {
+      "type": "intro",
+      "heading": "Why numbers first?",
+      "body": "Numbers show up everywhere — prices, ages, phone numbers, times. Punjabi numbers one to ten are short, and once you know them you can already build real sentences like \"two brothers\" or \"one glass of water\".\n\nPunjabi has its own digits in the Gurmukhi script (੧, ੨, ੩…) but everyday writing often uses the digits you already know. Both are shown here."
+    },
+    {
+      "type": "vocabulary",
+      "heading": "Numbers one to ten",
+      "items": [
+        {
+          "id": "v_ik",
+          "term": {
+            "gurmukhi": "੧ · ਇੱਕ",
+            "romanised": "ik",
+            "english": "one",
+            "audioRef": "l1_m2/ik.mp3"
+          },
+          "partOfSpeech": "number",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_do",
+          "term": {
+            "gurmukhi": "੨ · ਦੋ",
+            "romanised": "do",
+            "english": "two",
+            "audioRef": "l1_m2/do.mp3"
+          },
+          "partOfSpeech": "number",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_tin",
+          "term": {
+            "gurmukhi": "੩ · ਤਿੰਨ",
+            "romanised": "tin",
+            "english": "three",
+            "audioRef": "l1_m2/tin.mp3"
+          },
+          "partOfSpeech": "number",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_char",
+          "term": {
+            "gurmukhi": "੪ · ਚਾਰ",
+            "romanised": "chaar",
+            "english": "four",
+            "audioRef": "l1_m2/chaar.mp3"
+          },
+          "partOfSpeech": "number",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_panj",
+          "term": {
+            "gurmukhi": "੫ · ਪੰਜ",
+            "romanised": "panj",
+            "english": "five",
+            "audioRef": "l1_m2/panj.mp3"
+          },
+          "partOfSpeech": "number",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_chhe",
+          "term": {
+            "gurmukhi": "੬ · ਛੇ",
+            "romanised": "chhe",
+            "english": "six",
+            "audioRef": "l1_m2/chhe.mp3"
+          },
+          "partOfSpeech": "number",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_sat_num",
+          "term": {
+            "gurmukhi": "੭ · ਸੱਤ",
+            "romanised": "sat",
+            "english": "seven",
+            "audioRef": "l1_m2/sat.mp3"
+          },
+          "partOfSpeech": "number",
+          "usageNote": "Not to be confused with \"sat\" meaning truth in \"sat sri akal\".",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_ath",
+          "term": {
+            "gurmukhi": "੮ · ਅੱਠ",
+            "romanised": "atth",
+            "english": "eight",
+            "audioRef": "l1_m2/atth.mp3"
+          },
+          "partOfSpeech": "number",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_nau",
+          "term": {
+            "gurmukhi": "੯ · ਨੌ",
+            "romanised": "nau",
+            "english": "nine",
+            "audioRef": "l1_m2/nau.mp3"
+          },
+          "partOfSpeech": "number",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_das",
+          "term": {
+            "gurmukhi": "੧੦ · ਦੱਸ",
+            "romanised": "das",
+            "english": "ten",
+            "audioRef": "l1_m2/das.mp3"
+          },
+          "partOfSpeech": "number",
+          "verificationStatus": "unverified"
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "heading": "Numbers in real sentences",
+      "sentences": [
+        {
+          "line": {
+            "gurmukhi": "ਇੱਕ, ਦੋ, ਤਿੰਨ, ਚਾਰ, ਪੰਜ।",
+            "romanised": "Ik, do, tin, chaar, panj.",
+            "english": "One, two, three, four, five.",
+            "audioRef": "l1_m2/ex_counting.mp3"
+          }
+        },
+        {
+          "line": {
+            "gurmukhi": "ਇੱਕ ਗਲਾਸ ਪਾਣੀ।",
+            "romanised": "Ik glass paani.",
+            "english": "One glass of water.",
+            "audioRef": "l1_m2/ex_ik_glass.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਇੱਕ", "romanised": "ik", "meaning": "one" },
+            { "gurmukhi": "ਗਲਾਸ", "romanised": "glass", "meaning": "glass" },
+            { "gurmukhi": "ਪਾਣੀ", "romanised": "paani", "meaning": "water" }
+          ]
+        },
+        {
+          "line": {
+            "gurmukhi": "ਮੇਰੇ ਦੋ ਭਰਾ ਹਨ।",
+            "romanised": "Mere do bhra han.",
+            "english": "I have two brothers. (lit. \"of-me two brothers are\")",
+            "audioRef": "l1_m2/ex_do_bhra.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਮੇਰੇ", "romanised": "mere", "meaning": "my / of-me" },
+            { "gurmukhi": "ਦੋ", "romanised": "do", "meaning": "two" },
+            { "gurmukhi": "ਭਰਾ", "romanised": "bhra", "meaning": "brothers" },
+            { "gurmukhi": "ਹਨ", "romanised": "han", "meaning": "are" }
+          ],
+          "note": "Punjabi often says \"of-me X are\" instead of \"I have X\"."
+        }
+      ]
+    },
+    {
+      "type": "breakdown",
+      "heading": "Sentence breakdown",
+      "sentence": {
+        "line": {
+          "gurmukhi": "ਮੇਰੇ ਦੋ ਭਰਾ ਹਨ।",
+          "romanised": "Mere do bhra han.",
+          "english": "I have two brothers."
+        }
+      },
+      "glosses": [
+        { "gurmukhi": "ਮੇਰੇ", "romanised": "mere", "meaning": "of me / my", "grammarNote": "oblique form of mera — changes with the noun" },
+        { "gurmukhi": "ਦੋ", "romanised": "do", "meaning": "two", "grammarNote": "number sits before the noun, like English" },
+        { "gurmukhi": "ਭਰਾ", "romanised": "bhra", "meaning": "brothers", "grammarNote": "plural noun" },
+        { "gurmukhi": "ਹਨ", "romanised": "han", "meaning": "are", "grammarNote": "verb — always last" }
+      ],
+      "note": "Word order: \"of-me two brothers are.\" The number goes before the noun, and the verb still lands at the end."
+    },
+    {
+      "type": "grammar",
+      "heading": "How numbers behave",
+      "body": "Punjabi numbers go directly before the noun: ਇੱਕ ਗਲਾਸ (one glass), ਦੋ ਭਰਾ (two brothers). There is no word for \"of\" between a number and a noun in counting — \"ik glass paani\" literally stacks one + glass + water.\n\nNotice that the verb \"to have\" is usually expressed with ਮੇਰੇ/ਮੇਰੀ ਕੋਲ (with me) or simply \"mere X han\" — \"of-me X are\" — rather than a direct verb like English \"have\"."
+    },
+    {
+      "type": "whyThisWay",
+      "heading": "Why is it said this way?",
+      "body": "Gurmukhi has its own digit symbols, but in markets, buses, and texts you will see a mix: prices often in Arabic digits, formal documents in Gurmukhi digits. Learning to recognise ੧–੧੦ is useful, but the spoken words matter more at this stage.\n\nThe \"mere do bhra han\" pattern feels backwards at first, but it mirrors how many Punjabi possession sentences work — the things exist \"of you\" rather than you \"having\" them."
+    },
+    {
+      "type": "conversation",
+      "heading": "Counting at home",
+      "conversation": {
+        "title": "How many brothers?",
+        "context": "Simran asks Gurnaam about his family.",
+        "lines": [
+          {
+            "speaker": "Simran",
+            "line": {
+              "gurmukhi": "ਤੁਹਾਡੇ ਕਿੰਨੇ ਭਰਾ ਹਨ?",
+              "romanised": "Tuhaade kinne bhra han?",
+              "english": "How many brothers do you have?"
+            }
+          },
+          {
+            "speaker": "Gurnaam",
+            "line": {
+              "gurmukhi": "ਮੇਰੇ ਦੋ ਭਰਾ ਹਨ।",
+              "romanised": "Mere do bhra han.",
+              "english": "I have two brothers."
+            }
+          },
+          {
+            "speaker": "Simran",
+            "line": {
+              "gurmukhi": "ਅਤੇ ਭੈਣਾਂ?",
+              "romanised": "Ate bhainaan?",
+              "english": "And sisters?"
+            }
+          },
+          {
+            "speaker": "Gurnaam",
+            "line": {
+              "gurmukhi": "ਮੇਰੀ ਇੱਕ ਭੈਣ ਹੈ।",
+              "romanised": "Meri ik bhain hai.",
+              "english": "I have one sister. (meri — because bhain is feminine)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "exerciseSet",
+      "heading": "Check your understanding",
+      "exercises": [
+        {
+          "type": "multipleChoice",
+          "id": "e_num_1",
+          "prompt": { "gurmukhi": "੫ · ਪੰਜ", "romanised": "panj" },
+          "question": "Which number is this?",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "three", "english": "three" } },
+            { "id": "b", "line": { "gurmukhi": "five", "english": "five" } },
+            { "id": "c", "line": { "gurmukhi": "seven", "english": "seven" } }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "type": "matchPairs",
+          "id": "e_num_2",
+          "instructions": "Match each number to its word",
+          "pairs": [
+            {
+              "id": "p1",
+              "left": { "gurmukhi": "੨", "romanised": "2" },
+              "right": { "gurmukhi": "ਦੋ", "romanised": "do" }
+            },
+            {
+              "id": "p2",
+              "left": { "gurmukhi": "੪", "romanised": "4" },
+              "right": { "gurmukhi": "ਚਾਰ", "romanised": "chaar" }
+            },
+            {
+              "id": "p3",
+              "left": { "gurmukhi": "੭", "romanised": "7" },
+              "right": { "gurmukhi": "ਸੱਤ", "romanised": "sat" }
+            },
+            {
+              "id": "p4",
+              "left": { "gurmukhi": "੧੦", "romanised": "10" },
+              "right": { "gurmukhi": "ਦੱਸ", "romanised": "das" }
+            }
+          ]
+        },
+        {
+          "type": "multipleChoice",
+          "id": "e_num_3",
+          "prompt": {
+            "gurmukhi": "ਮੇਰੇ ਦੋ ਭਰਾ ਹਨ।",
+            "romanised": "Mere do bhra han."
+          },
+          "question": "What does this sentence mean?",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "I have two brothers", "english": "I have two brothers" } },
+            { "id": "b", "line": { "gurmukhi": "I am two years old", "english": "I am two years old" } },
+            { "id": "c", "line": { "gurmukhi": "Two brothers are here", "english": "Two brothers are here" } }
+          ],
+          "correctOptionId": "a",
+          "explanation": "mere = of-me, do = two, bhra = brothers, han = are."
+        },
+        {
+          "type": "arrangeWords",
+          "id": "e_num_4",
+          "prompt": {
+            "gurmukhi": "One glass of water",
+            "english": "Build the Punjabi phrase for \"one glass of water\""
+          },
+          "tokens": ["ਇੱਕ", "ਗਲਾਸ", "ਪਾਣੀ"],
+          "distractors": ["ਦੋ", "ਦੁੱਧ"],
+          "explanation": "Number + thing + substance: ik glass paani."
+        },
+        {
+          "type": "typeTranslation",
+          "id": "e_num_5",
+          "prompt": { "gurmukhi": "ਤਿੰਨ", "romanised": "tin" },
+          "acceptedAnswers": ["three", "3"],
+          "explanation": "tin = 3."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "heading": "Lesson summary",
+      "body": "You can count to ten, recognise the Gurmukhi digits, and use numbers in simple sentences.",
+      "keyPoints": [
+        "ik do tin chaar panj chhe sat atth nau das — one through ten",
+        "Numbers go straight before the noun: ik glass, do bhra",
+        "\"I have two brothers\" = mere do bhra han — literally \"of-me two brothers are\"",
+        "Gurmukhi digits ੧–੧੦ appear in formal writing; Arabic digits are common in daily life"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "id": "l1_m2_family",
+  "moduleId": "l1_m2",
+  "title": "Family members",
+  "subtitle": "Talking about the people around you",
+  "estimatedMinutes": 14,
+  "verificationStatus": "unverified",
+  "sections": [
+    {
+      "type": "intro",
+      "heading": "Family in Punjabi life",
+      "body": "Family is central in Punjabi culture, and family words come up constantly in conversation — \"this is my mother\", \"I have three brothers\", \"my grandmother lives with us\".\n\nOne important thing to know early: Punjabi kinship words are more specific than English. Your father's brother and your mother's brother have different names. This lesson covers the core words; the detailed uncle/aunt map comes later."
+    },
+    {
+      "type": "vocabulary",
+      "heading": "Core family words",
+      "items": [
+        {
+          "id": "v_maa",
+          "term": {
+            "gurmukhi": "ਮਾਂ",
+            "romanised": "maa",
+            "english": "mother, mum",
+            "audioRef": "l1_m2/maa.mp3"
+          },
+          "partOfSpeech": "noun",
+          "usageNote": "Everyday word. \"Mata ji\" is more formal/respectful.",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_baapu",
+          "term": {
+            "gurmukhi": "ਬਾਪੂ",
+            "romanised": "baapu",
+            "english": "father, dad",
+            "audioRef": "l1_m2/baapu.mp3"
+          },
+          "partOfSpeech": "noun",
+          "usageNote": "Warm, everyday word. \"Pitaji\" is more formal.",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_bhra",
+          "term": {
+            "gurmukhi": "ਭਰਾ",
+            "romanised": "bhra",
+            "english": "brother",
+            "audioRef": "l1_m2/bhra.mp3"
+          },
+          "partOfSpeech": "noun",
+          "usageNote": "\"Praa\" is a common spoken variant.",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_bhain",
+          "term": {
+            "gurmukhi": "ਭੈਣ",
+            "romanised": "bhain",
+            "english": "sister",
+            "audioRef": "l1_m2/bhain.mp3"
+          },
+          "partOfSpeech": "noun",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_dada",
+          "term": {
+            "gurmukhi": "ਦਾਦਾ",
+            "romanised": "dada",
+            "english": "grandfather (father's father)",
+            "audioRef": "l1_m2/dada.mp3"
+          },
+          "partOfSpeech": "noun",
+          "usageNote": "Paternal grandfather. Mother's father is \"nana\".",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_dadi",
+          "term": {
+            "gurmukhi": "ਦਾਦੀ",
+            "romanised": "dadi",
+            "english": "grandmother (father's mother)",
+            "audioRef": "l1_m2/dadi.mp3"
+          },
+          "partOfSpeech": "noun",
+          "usageNote": "Paternal grandmother. Mother's mother is \"nani\".",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_bachche",
+          "term": {
+            "gurmukhi": "ਬੱਚੇ",
+            "romanised": "bachche",
+            "english": "children",
+            "audioRef": "l1_m2/bachche.mp3"
+          },
+          "partOfSpeech": "noun",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_parivaar",
+          "term": {
+            "gurmukhi": "ਪਰਿਵਾਰ",
+            "romanised": "parivaar",
+            "english": "family",
+            "audioRef": "l1_m2/parivaar.mp3"
+          },
+          "partOfSpeech": "noun",
+          "verificationStatus": "unverified"
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "heading": "Talking about family",
+      "sentences": [
+        {
+          "line": {
+            "gurmukhi": "ਇਹ ਮੇਰੀ ਮਾਂ ਹੈ।",
+            "romanised": "Ih meri maa hai.",
+            "english": "This is my mother.",
+            "audioRef": "l1_m2/ex_meri_maa.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਇਹ", "romanised": "ih", "meaning": "this" },
+            { "gurmukhi": "ਮੇਰੀ", "romanised": "meri", "meaning": "my (feminine noun)" },
+            { "gurmukhi": "ਮਾਂ", "romanised": "maa", "meaning": "mother" },
+            { "gurmukhi": "ਹੈ", "romanised": "hai", "meaning": "is" }
+          ],
+          "note": "meri — because maa is feminine. Watch this pattern."
+        },
+        {
+          "line": {
+            "gurmukhi": "ਇਹ ਮੇਰਾ ਭਰਾ ਹੈ।",
+            "romanised": "Ih mera bhra hai.",
+            "english": "This is my brother.",
+            "audioRef": "l1_m2/ex_mera_bhra.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਇਹ", "romanised": "ih", "meaning": "this" },
+            { "gurmukhi": "ਮੇਰਾ", "romanised": "mera", "meaning": "my (masculine noun)" },
+            { "gurmukhi": "ਭਰਾ", "romanised": "bhra", "meaning": "brother" },
+            { "gurmukhi": "ਹੈ", "romanised": "hai", "meaning": "is" }
+          ]
+        },
+        {
+          "line": {
+            "gurmukhi": "ਮੇਰੇ ਦੋ ਬੱਚੇ ਹਨ।",
+            "romanised": "Mere do bachche han.",
+            "english": "I have two children.",
+            "audioRef": "l1_m2/ex_do_bachche.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਮੇਰੇ", "romanised": "mere", "meaning": "my / of-me (plural)" },
+            { "gurmukhi": "ਦੋ", "romanised": "do", "meaning": "two" },
+            { "gurmukhi": "ਬੱਚੇ", "romanised": "bachche", "meaning": "children" },
+            { "gurmukhi": "ਹਨ", "romanised": "han", "meaning": "are" }
+          ]
+        },
+        {
+          "line": {
+            "gurmukhi": "ਮੇਰਾ ਪਰਿਵਾਰ ਵੱਡਾ ਹੈ।",
+            "romanised": "Mera parivaar vadda hai.",
+            "english": "My family is big.",
+            "audioRef": "l1_m2/ex_parivaar.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "type": "breakdown",
+      "heading": "Sentence breakdown",
+      "sentence": {
+        "line": {
+          "gurmukhi": "ਇਹ ਮੇਰੀ ਭੈਣ ਹੈ।",
+          "romanised": "Ih meri bhain hai.",
+          "english": "This is my sister."
+        }
+      },
+      "glosses": [
+        { "gurmukhi": "ਇਹ", "romanised": "ih", "meaning": "this", "grammarNote": "subject" },
+        { "gurmukhi": "ਮੇਰੀ", "romanised": "meri", "meaning": "my", "grammarNote": "feminine — matches bhain, not the speaker" },
+        { "gurmukhi": "ਭੈਣ", "romanised": "bhain", "meaning": "sister", "grammarNote": "feminine noun" },
+        { "gurmukhi": "ਹੈ", "romanised": "hai", "meaning": "is", "grammarNote": "verb — last" }
+      ],
+      "note": "The shape of \"my\" follows the gender of the noun it describes — mera bhra (m) vs meri bhain (f) — never the speaker's own gender."
+    },
+    {
+      "type": "grammar",
+      "heading": "mera / meri / mere — the gender of \"my\"",
+      "body": "\"My\" changes to match the thing you own, not you:\n\n• ਮੇਰਾ (mera) — masculine singular: mera bhra, mera baapu\n• ਮੇਰੀ (meri) — feminine: meri maa, meri bhain, meri dadi\n• ਮੇਰੇ (mere) — masculine plural / oblique: mere bachche, mere do bhra han\n\nPunjabi nouns each carry a gender. Family words make a good first set to feel the pattern: bhra, baapu, dada, parivaar are masculine; maa, bhain, dadi are feminine."
+    },
+    {
+      "type": "whyThisWay",
+      "heading": "Why is it said this way?",
+      "body": "English has one word — \"uncle\" — for many relationships. Punjabi splits them: ਚਾਚਾ (father's brother) and ਮਾਮਾ (mother's brother) are different people in the family map, and different words. The same applies to grandparents: dada/dadi are the father's parents, nana/nani the mother's.\n\nWhy? Joint-family life historically kept paternal relatives in the same household, so language grew labels that make the exact relationship unambiguous. When you learn the words, you're learning the family structure too."
+    },
+    {
+      "type": "conversation",
+      "heading": "Introducing the family",
+      "conversation": {
+        "title": "Who is this?",
+        "context": "Amrit shows Baldev a family photo.",
+        "lines": [
+          {
+            "speaker": "Baldev",
+            "line": {
+              "gurmukhi": "ਇਹ ਕੌਣ ਹੈ?",
+              "romanised": "Ih kaun hai?",
+              "english": "Who is this?"
+            }
+          },
+          {
+            "speaker": "Amrit",
+            "line": {
+              "gurmukhi": "ਇਹ ਮੇਰੀ ਮਾਂ ਹੈ।",
+              "romanised": "Ih meri maa hai.",
+              "english": "This is my mother."
+            }
+          },
+          {
+            "speaker": "Baldev",
+            "line": {
+              "gurmukhi": "ਅਤੇ ਇਹ?",
+              "romanised": "Ate ih?",
+              "english": "And this one?"
+            }
+          },
+          {
+            "speaker": "Amrit",
+            "line": {
+              "gurmukhi": "ਇਹ ਮੇਰਾ ਦਾਦਾ ਹੈ। ਉਹ ਮੇਰੀ ਦਾਦੀ ਹੈ।",
+              "romanised": "Ih mera dada hai. Oh meri dadi hai.",
+              "english": "This is my grandfather. That is my grandmother."
+            }
+          },
+          {
+            "speaker": "Baldev",
+            "line": {
+              "gurmukhi": "ਵਾਹ, ਵੱਡਾ ਪਰਿਵਾਰ!",
+              "romanised": "Vaah, vadda parivaar!",
+              "english": "Wow, a big family!"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "exerciseSet",
+      "heading": "Check your understanding",
+      "exercises": [
+        {
+          "type": "multipleChoice",
+          "id": "e_fam_1",
+          "prompt": { "gurmukhi": "ਭੈਣ", "romanised": "bhain" },
+          "question": "What does this word mean?",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "brother", "english": "brother" } },
+            { "id": "b", "line": { "gurmukhi": "sister", "english": "sister" } },
+            { "id": "c", "line": { "gurmukhi": "mother", "english": "mother" } }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "type": "multipleChoice",
+          "id": "e_fam_2",
+          "prompt": { "gurmukhi": "___ ਮਾਂ ਹੈ।", "romanised": "Ih ___ maa hai." },
+          "question": "Which word fills the blank for \"my\"?",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "ਮੇਰਾ", "romanised": "mera" } },
+            { "id": "b", "line": { "gurmukhi": "ਮੇਰੀ", "romanised": "meri" } },
+            { "id": "c", "line": { "gurmukhi": "ਮੇਰੇ", "romanised": "mere" } }
+          ],
+          "correctOptionId": "b",
+          "explanation": "maa is feminine, so \"my\" takes the feminine form meri — regardless of who is speaking."
+        },
+        {
+          "type": "arrangeWords",
+          "id": "e_fam_3",
+          "prompt": {
+            "gurmukhi": "This is my brother",
+            "english": "Build the Punjabi sentence for \"This is my brother\""
+          },
+          "tokens": ["ਇਹ", "ਮੇਰਾ", "ਭਰਾ", "ਹੈ"],
+          "distractors": ["ਮੇਰੀ", "ਹਨ"],
+          "explanation": "ih mera bhra hai — masculine, so mera and singular hai."
+        },
+        {
+          "type": "matchPairs",
+          "id": "e_fam_4",
+          "instructions": "Match each family member",
+          "pairs": [
+            {
+              "id": "p1",
+              "left": { "gurmukhi": "ਮਾਂ", "romanised": "maa" },
+              "right": { "gurmukhi": "mother", "english": "mother" }
+            },
+            {
+              "id": "p2",
+              "left": { "gurmukhi": "ਬਾਪੂ", "romanised": "baapu" },
+              "right": { "gurmukhi": "father", "english": "father" }
+            },
+            {
+              "id": "p3",
+              "left": { "gurmukhi": "ਦਾਦੀ", "romanised": "dadi" },
+              "right": { "gurmukhi": "grandmother", "english": "grandmother" }
+            },
+            {
+              "id": "p4",
+              "left": { "gurmukhi": "ਭਰਾ", "romanised": "bhra" },
+              "right": { "gurmukhi": "brother", "english": "brother" }
+            }
+          ]
+        },
+        {
+          "type": "typeTranslation",
+          "id": "e_fam_5",
+          "prompt": {
+            "gurmukhi": "ਇਹ ਮੇਰਾ ਪਰਿਵਾਰ ਹੈ",
+            "romanised": "Ih mera parivaar hai"
+          },
+          "acceptedAnswers": [
+            "This is my family",
+            "It is my family",
+            "This's my family"
+          ],
+          "explanation": "ih = this, mera = my (masculine, parivaar), hai = is."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "heading": "Lesson summary",
+      "body": "You can name close family members and say \"this is my ___\" with the right form of \"my\".",
+      "keyPoints": [
+        "maa, baapu, bhra, bhain, dada, dadi, bachche, parivaar",
+        "my = mera (m) / meri (f) / mere (plural) — it follows the noun's gender",
+        "ih X hai = \"this is X\"; oh X hai = \"that is X\"",
+        "Punjabi kinship is precise: dada/dadi are the father's parents"
+      ]
+    }
+  ]
+}

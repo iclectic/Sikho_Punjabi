@@ -1,0 +1,301 @@
+{
+  "id": "l1_m2_yesno",
+  "moduleId": "l1_m2",
+  "title": "Yes and no questions",
+  "subtitle": "Asking and answering simple questions",
+  "estimatedMinutes": 12,
+  "verificationStatus": "unverified",
+  "sections": [
+    {
+      "type": "intro",
+      "heading": "Questions you can answer today",
+      "body": "You already know haan (yes) and nahin (no). Now let's build the questions that produce those answers.\n\nPunjabi yes/no questions work differently from English — no word swaps, no \"do you\". One small word does all the work."
+    },
+    {
+      "type": "vocabulary",
+      "heading": "New words",
+      "items": [
+        {
+          "id": "v_ki",
+          "term": {
+            "gurmukhi": "ਕੀ",
+            "romanised": "ki",
+            "english": "question marker (turns a statement into a yes/no question)",
+            "audioRef": "l1_m2/ki.mp3"
+          },
+          "partOfSpeech": "particle",
+          "usageNote": "Placed at the start. Also means \"what\" in other contexts.",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_ih",
+          "term": {
+            "gurmukhi": "ਇਹ",
+            "romanised": "ih",
+            "english": "this",
+            "audioRef": "l1_m2/ih.mp3"
+          },
+          "partOfSpeech": "pronoun",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_oh",
+          "term": {
+            "gurmukhi": "ਉਹ",
+            "romanised": "oh",
+            "english": "that",
+            "audioRef": "l1_m2/oh.mp3"
+          },
+          "partOfSpeech": "pronoun",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_punjabi",
+          "term": {
+            "gurmukhi": "ਪੰਜਾਬੀ",
+            "romanised": "panjabi",
+            "english": "Punjabi (the language)",
+            "audioRef": "l1_m2/panjabi.mp3"
+          },
+          "partOfSpeech": "noun",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_bolde",
+          "term": {
+            "gurmukhi": "ਬੋਲਦੇ",
+            "romanised": "bolde",
+            "english": "speak (habitual, masculine plural/polite)",
+            "audioRef": "l1_m2/bolde.mp3"
+          },
+          "partOfSpeech": "verb",
+          "usageNote": "The polite \"tusi\" form — the everyday way to say \"you speak\".",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_bhukh",
+          "term": {
+            "gurmukhi": "ਭੁੱਖ",
+            "romanised": "bhukh",
+            "english": "hunger",
+            "audioRef": "l1_m2/bhukh.mp3"
+          },
+          "partOfSpeech": "noun",
+          "usageNote": "\"bhukh laggi hai\" — hungry, lit. \"hunger is applied\".",
+          "verificationStatus": "unverified"
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "heading": "Questions in action",
+      "sentences": [
+        {
+          "line": {
+            "gurmukhi": "ਤੁਸੀਂ ਠੀਕ ਹੋ।",
+            "romanised": "Tusi theek ho.",
+            "english": "You are fine. (a statement)",
+            "audioRef": "l1_m2/ex_statement.mp3"
+          },
+          "note": "Watch what happens when we add ki…"
+        },
+        {
+          "line": {
+            "gurmukhi": "ਕੀ ਤੁਸੀਂ ਠੀਕ ਹੋ?",
+            "romanised": "Ki tusi theek ho?",
+            "english": "Are you fine?",
+            "audioRef": "l1_m2/ex_ki_theek.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਕੀ", "romanised": "ki", "meaning": "question marker" },
+            { "gurmukhi": "ਤੁਸੀਂ", "romanised": "tusi", "meaning": "you (polite)" },
+            { "gurmukhi": "ਠੀਕ", "romanised": "theek", "meaning": "fine" },
+            { "gurmukhi": "ਹੋ", "romanised": "ho", "meaning": "are" }
+          ],
+          "note": "Same words, same order — ki just flags it as a question."
+        },
+        {
+          "line": {
+            "gurmukhi": "ਕੀ ਤੁਸੀਂ ਪੰਜਾਬੀ ਬੋਲਦੇ ਹੋ?",
+            "romanised": "Ki tusi panjabi bolde ho?",
+            "english": "Do you speak Punjabi?",
+            "audioRef": "l1_m2/ex_bolde.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਕੀ", "romanised": "ki", "meaning": "question marker" },
+            { "gurmukhi": "ਤੁਸੀਂ", "romanised": "tusi", "meaning": "you (polite)" },
+            { "gurmukhi": "ਪੰਜਾਬੀ", "romanised": "panjabi", "meaning": "Punjabi" },
+            { "gurmukhi": "ਬੋਲਦੇ", "romanised": "bolde", "meaning": "speak (polite form)" },
+            { "gurmukhi": "ਹੋ", "romanised": "ho", "meaning": "do/are" }
+          ]
+        },
+        {
+          "line": {
+            "gurmukhi": "ਹਾਂ, ਮੈਂ ਥੋੜ੍ਹੀ ਪੰਜਾਬੀ ਬੋਲਦਾ ਹਾਂ।",
+            "romanised": "Haan, main thorhi panjabi bolda haan.",
+            "english": "Yes, I speak a little Punjabi. (male speaker)",
+            "audioRef": "l1_m2/ex_answer.mp3"
+          }
+        }
+      ]
+    },
+    {
+      "type": "breakdown",
+      "heading": "Sentence breakdown",
+      "sentence": {
+        "line": {
+          "gurmukhi": "ਕੀ ਤੁਸੀਂ ਪੰਜਾਬੀ ਬੋਲਦੇ ਹੋ?",
+          "romanised": "Ki tusi panjabi bolde ho?",
+          "english": "Do you speak Punjabi?"
+        }
+      },
+      "glosses": [
+        { "gurmukhi": "ਕੀ", "romanised": "ki", "meaning": "yes/no marker", "grammarNote": "sits at the very start" },
+        { "gurmukhi": "ਤੁਸੀਂ", "romanised": "tusi", "meaning": "you", "grammarNote": "subject — stays put" },
+        { "gurmukhi": "ਪੰਜਾਬੀ", "romanised": "panjabi", "meaning": "Punjabi", "grammarNote": "object — before the verb" },
+        { "gurmukhi": "ਬੋਲਦੇ ਹੋ", "romanised": "bolde ho", "meaning": "speak + do", "grammarNote": "verb phrase — always at the end" }
+      ],
+      "note": "English rearranges words to ask (\"you speak\" → \"do you speak\"). Punjabi just plants ki in front and leaves the sentence untouched."
+    },
+    {
+      "type": "grammar",
+      "heading": "How yes/no questions work",
+      "body": "Statement: ਤੁਸੀਂ ਠੀਕ ਹੋ — \"you are fine.\"\nQuestion: ਕੀ ਤੁਸੀਂ ਠੀਕ ਹੋ? — \"are you fine?\"\n\nਕੀ at the front marks the sentence as a yes/no question. Nothing else moves — the verb still sits at the end.\n\nIn casual speech people often drop ki and use rising intonation instead — just like \"You're fine?\" in English. For now, using ki is safer and always clear.\n\nAnswering: haan (yes) or nahin (no), optionally followed by the full sentence — \"Haan, main theek haan.\""
+    },
+    {
+      "type": "whyThisWay",
+      "heading": "Why is it said this way?",
+      "body": "English marks questions by flipping word order or inserting a helper verb (\"do\"). Many learners then expect every language to rearrange sentences for questions — Punjabi doesn't bother.\n\nA leading particle is a common pattern in South Asian languages: the listener hears ki up front and knows a yes/no answer is coming. It is also worth noting that ki does double duty — it also means \"what\" in questions like \"ki hai?\" (what is it?). Context and position tell you which job it is doing."
+    },
+    {
+      "type": "conversation",
+      "heading": "A quick check-in",
+      "conversation": {
+        "title": "At the market",
+        "context": "Gurnaam meets Simran at the market and checks she is okay.",
+        "lines": [
+          {
+            "speaker": "Gurnaam",
+            "line": {
+              "gurmukhi": "ਕੀ ਤੁਸੀਂ ਠੀਕ ਹੋ?",
+              "romanised": "Ki tusi theek ho?",
+              "english": "Are you okay?"
+            }
+          },
+          {
+            "speaker": "Simran",
+            "line": {
+              "gurmukhi": "ਹਾਂ, ਮੈਂ ਠੀਕ ਹਾਂ, ਧੰਨਵਾਦ।",
+              "romanised": "Haan, main theek haan, dhannvaad.",
+              "english": "Yes, I am fine, thank you."
+            }
+          },
+          {
+            "speaker": "Gurnaam",
+            "line": {
+              "gurmukhi": "ਕੀ ਇਹ ਤੁਹਾਡਾ ਹੈ?",
+              "romanised": "Ki ih tuhaada hai?",
+              "english": "Is this yours?"
+            }
+          },
+          {
+            "speaker": "Simran",
+            "line": {
+              "gurmukhi": "ਨਹੀਂ, ਉਹ ਮੇਰਾ ਨਹੀਂ ਹੈ।",
+              "romanised": "Nahin, oh mera nahin hai.",
+              "english": "No, that is not mine."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "exerciseSet",
+      "heading": "Check your understanding",
+      "exercises": [
+        {
+          "type": "multipleChoice",
+          "id": "e_yn_1",
+          "prompt": { "gurmukhi": "ਕੀ ਤੁਸੀਂ ਠੀਕ ਹੋ?", "romanised": "Ki tusi theek ho?" },
+          "question": "What is being asked?",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "Are you fine?", "english": "Are you fine?" } },
+            { "id": "b", "line": { "gurmukhi": "What are you doing?", "english": "What are you doing?" } },
+            { "id": "c", "line": { "gurmukhi": "How old are you?", "english": "How old are you?" } }
+          ],
+          "correctOptionId": "a"
+        },
+        {
+          "type": "multipleChoice",
+          "id": "e_yn_2",
+          "prompt": {
+            "gurmukhi": "Turn this statement into a question: ਤੁਸੀਂ ਠੀਕ ਹੋ।",
+            "english": "Turn this statement into a question: \"Tusi theek ho.\""
+          },
+          "question": "Which is correct?",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "ਤੁਸੀਂ ਕੀ ਠੀਕ ਹੋ?", "romanised": "Tusi ki theek ho?" } },
+            { "id": "b", "line": { "gurmukhi": "ਕੀ ਤੁਸੀਂ ਠੀਕ ਹੋ?", "romanised": "Ki tusi theek ho?" } },
+            { "id": "c", "line": { "gurmukhi": "ਠੀਕ ਤੁਸੀਂ ਕੀ ਹੋ?", "romanised": "Theek tusi ki ho?" } }
+          ],
+          "correctOptionId": "b",
+          "explanation": "ki goes at the very start; nothing else moves."
+        },
+        {
+          "type": "arrangeWords",
+          "id": "e_yn_3",
+          "prompt": {
+            "gurmukhi": "Do you speak Punjabi?",
+            "english": "Build the Punjabi question for \"Do you speak Punjabi?\""
+          },
+          "tokens": ["ਕੀ", "ਤੁਸੀਂ", "ਪੰਜਾਬੀ", "ਬੋਲਦੇ", "ਹੋ"],
+          "distractors": ["ਮੈਂ", "ਹਾਂ"],
+          "explanation": "ki tusi panjabi bolde ho — marker + subject + object + verb."
+        },
+        {
+          "type": "fillBlank",
+          "id": "e_yn_4",
+          "prompt": {
+            "gurmukhi": "Answer \"yes\" to a yes/no question",
+            "english": "Choose the word for \"yes\""
+          },
+          "template": "___, main theek haan.",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "ਹਾਂ", "romanised": "haan" } },
+            { "id": "b", "line": { "gurmukhi": "ਨਹੀਂ", "romanised": "nahin" } },
+            { "id": "c", "line": { "gurmukhi": "ਕੀ", "romanised": "ki" } }
+          ],
+          "correctOptionId": "a",
+          "explanation": "haan = yes. Nahin would contradict the rest of the sentence."
+        },
+        {
+          "type": "typeTranslation",
+          "id": "e_yn_5",
+          "prompt": {
+            "gurmukhi": "ਕੀ ਤੁਸੀਂ ਠੀਕ ਹੋ?",
+            "romanised": "Ki tusi theek ho?"
+          },
+          "acceptedAnswers": [
+            "Are you okay",
+            "Are you fine",
+            "Are you ok",
+            "Are you alright",
+            "are you well"
+          ],
+          "explanation": "ki = question marker, tusi = you, theek = fine, ho = are."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "heading": "Lesson summary",
+      "body": "You can turn a statement into a yes/no question and answer it.",
+      "keyPoints": [
+        "ki at the start flags a yes/no question — nothing else changes",
+        "Statement: tusi theek ho → Question: ki tusi theek ho?",
+        "haan = yes, nahin = no; a full answer echoes the sentence",
+        "ki also means \"what\" in other positions — context decides"
+      ]
+    }
+  ]
+}

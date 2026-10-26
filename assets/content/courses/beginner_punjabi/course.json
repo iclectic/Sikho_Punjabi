@@ -2,7 +2,7 @@
   "id": "beginner_punjabi",
   "title": "Beginner Punjabi",
   "description": "A structured course taking you from no Punjabi to everyday conversations.",
-  "contentVersion": 1,
+  "contentVersion": 2,
   "levels": [
     {
       "id": "level_1",
@@ -26,6 +26,37 @@
               "title": "Introducing yourself",
               "file": "courses/beginner_punjabi/lessons/introducing_yourself.json",
               "estimatedMinutes": 12
+            }
+          ]
+        },
+        {
+          "id": "l1_m2",
+          "title": "Everyday essentials",
+          "description": "Numbers, family, questions, and the verbs you will use every day.",
+          "lessons": [
+            {
+              "id": "l1_m2_numbers",
+              "title": "Numbers 1–10",
+              "file": "courses/beginner_punjabi/lessons/numbers.json",
+              "estimatedMinutes": 12
+            },
+            {
+              "id": "l1_m2_family",
+              "title": "Family members",
+              "file": "courses/beginner_punjabi/lessons/family.json",
+              "estimatedMinutes": 14
+            },
+            {
+              "id": "l1_m2_yesno",
+              "title": "Yes and no questions",
+              "file": "courses/beginner_punjabi/lessons/yes_no_questions.json",
+              "estimatedMinutes": 12
+            },
+            {
+              "id": "l1_m2_verbs",
+              "title": "Everyday verbs",
+              "file": "courses/beginner_punjabi/lessons/common_verbs.json",
+              "estimatedMinutes": 15
             }
           ]
         }

@@ -1,0 +1,370 @@
+{
+  "id": "l1_m2_verbs",
+  "moduleId": "l1_m2",
+  "title": "Everyday verbs",
+  "subtitle": "Your first Punjabi verbs and how they work",
+  "estimatedMinutes": 15,
+  "verificationStatus": "unverified",
+  "sections": [
+    {
+      "type": "intro",
+      "heading": "Verbs run the sentence",
+      "body": "In Punjabi the verb is the anchor — it always sits at the end of the sentence and carries a lot of information, including whether the subject is masculine or feminine.\n\nThis lesson gives you the ten most useful everyday verbs, the \"to do something\" infinitive form, and your first full present-tense sentence pattern: main X-da/X-di haan."
+    },
+    {
+      "type": "vocabulary",
+      "heading": "Ten verbs to start with",
+      "items": [
+        {
+          "id": "v_jaana",
+          "term": {
+            "gurmukhi": "ਜਾਣਾ",
+            "romanised": "jaana",
+            "english": "to go",
+            "audioRef": "l1_m2/jaana.mp3"
+          },
+          "partOfSpeech": "verb (infinitive)",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_auna",
+          "term": {
+            "gurmukhi": "ਆਉਣਾ",
+            "romanised": "auna",
+            "english": "to come",
+            "audioRef": "l1_m2/auna.mp3"
+          },
+          "partOfSpeech": "verb (infinitive)",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_khaana",
+          "term": {
+            "gurmukhi": "ਖਾਣਾ",
+            "romanised": "khaana",
+            "english": "to eat",
+            "audioRef": "l1_m2/khaana.mp3"
+          },
+          "partOfSpeech": "verb (infinitive)",
+          "usageNote": "Also the noun \"food\" — context decides.",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_peena",
+          "term": {
+            "gurmukhi": "ਪੀਣਾ",
+            "romanised": "peena",
+            "english": "to drink",
+            "audioRef": "l1_m2/peena.mp3"
+          },
+          "partOfSpeech": "verb (infinitive)",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_bolna",
+          "term": {
+            "gurmukhi": "ਬੋਲਣਾ",
+            "romanised": "bolna",
+            "english": "to speak, to talk",
+            "audioRef": "l1_m2/bolna.mp3"
+          },
+          "partOfSpeech": "verb (infinitive)",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_samajhna",
+          "term": {
+            "gurmukhi": "ਸਮਝਣਾ",
+            "romanised": "samajhna",
+            "english": "to understand",
+            "audioRef": "l1_m2/samajhna.mp3"
+          },
+          "partOfSpeech": "verb (infinitive)",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_dena",
+          "term": {
+            "gurmukhi": "ਦੇਣਾ",
+            "romanised": "dena",
+            "english": "to give",
+            "audioRef": "l1_m2/dena.mp3"
+          },
+          "partOfSpeech": "verb (infinitive)",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_laina",
+          "term": {
+            "gurmukhi": "ਲੈਣਾ",
+            "romanised": "laina",
+            "english": "to take",
+            "audioRef": "l1_m2/laina.mp3"
+          },
+          "partOfSpeech": "verb (infinitive)",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_sunna",
+          "term": {
+            "gurmukhi": "ਸੁਣਨਾ",
+            "romanised": "sunna",
+            "english": "to listen, to hear",
+            "audioRef": "l1_m2/sunna.mp3"
+          },
+          "partOfSpeech": "verb (infinitive)",
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "v_dekhna",
+          "term": {
+            "gurmukhi": "ਵੇਖਣਾ",
+            "romanised": "dekhna",
+            "english": "to see, to watch",
+            "audioRef": "l1_m2/dekhna.mp3"
+          },
+          "partOfSpeech": "verb (infinitive)",
+          "verificationStatus": "unverified"
+        }
+      ]
+    },
+    {
+      "type": "examples",
+      "heading": "Verbs in action",
+      "sentences": [
+        {
+          "line": {
+            "gurmukhi": "ਮੈਂ ਪੰਜਾਬੀ ਬੋਲਦਾ ਹਾਂ।",
+            "romanised": "Main panjabi bolda haan.",
+            "english": "I speak Punjabi. (male speaker)",
+            "audioRef": "l1_m2/ex_bolda.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਮੈਂ", "romanised": "main", "meaning": "I" },
+            { "gurmukhi": "ਪੰਜਾਬੀ", "romanised": "panjabi", "meaning": "Punjabi" },
+            { "gurmukhi": "ਬੋਲਦਾ", "romanised": "bolda", "meaning": "speak (masc.)" },
+            { "gurmukhi": "ਹਾਂ", "romanised": "haan", "meaning": "am" }
+          ],
+          "note": "bolda ends in -a because the speaker is masculine here."
+        },
+        {
+          "line": {
+            "gurmukhi": "ਮੈਂ ਪੰਜਾਬੀ ਬੋਲਦੀ ਹਾਂ।",
+            "romanised": "Main panjabi boldi haan.",
+            "english": "I speak Punjabi. (female speaker)",
+            "audioRef": "l1_m2/ex_boldi.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਮੈਂ", "romanised": "main", "meaning": "I" },
+            { "gurmukhi": "ਪੰਜਾਬੀ", "romanised": "panjabi", "meaning": "Punjabi" },
+            { "gurmukhi": "ਬੋਲਦੀ", "romanised": "boldi", "meaning": "speak (fem.)" },
+            { "gurmukhi": "ਹਾਂ", "romanised": "haan", "meaning": "am" }
+          ],
+          "note": "Same \"I\" — the verb ending changes with the speaker's gender, not the word for \"I\"."
+        },
+        {
+          "line": {
+            "gurmukhi": "ਮੈਂ ਪਾਣੀ ਪੀਂਦਾ ਹਾਂ।",
+            "romanised": "Main paani pinda haan.",
+            "english": "I drink water. (male speaker)",
+            "audioRef": "l1_m2/ex_pinda.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਮੈਂ", "romanised": "main", "meaning": "I" },
+            { "gurmukhi": "ਪਾਣੀ", "romanised": "paani", "meaning": "water" },
+            { "gurmukhi": "ਪੀਂਦਾ", "romanised": "pinda", "meaning": "drink (masc.)" },
+            { "gurmukhi": "ਹਾਂ", "romanised": "haan", "meaning": "am" }
+          ]
+        },
+        {
+          "line": {
+            "gurmukhi": "ਤੁਸੀਂ ਕਿੱਥੇ ਜਾਂਦੇ ਹੋ?",
+            "romanised": "Tusi kitthe jaande ho?",
+            "english": "Where do you go? / Where are you going?",
+            "audioRef": "l1_m2/ex_jaande.mp3"
+          },
+          "glosses": [
+            { "gurmukhi": "ਤੁਸੀਂ", "romanised": "tusi", "meaning": "you (polite)" },
+            { "gurmukhi": "ਕਿੱਥੇ", "romanised": "kitthe", "meaning": "where" },
+            { "gurmukhi": "ਜਾਂਦੇ", "romanised": "jaande", "meaning": "go (polite form)" },
+            { "gurmukhi": "ਹੋ", "romanised": "ho", "meaning": "are" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "breakdown",
+      "heading": "Sentence breakdown",
+      "sentence": {
+        "line": {
+          "gurmukhi": "ਮੈਂ ਰੋਟੀ ਖਾਂਦਾ ਹਾਂ।",
+          "romanised": "Main roti khanda haan.",
+          "english": "I eat bread. (male speaker)"
+        }
+      },
+      "glosses": [
+        { "gurmukhi": "ਮੈਂ", "romanised": "main", "meaning": "I", "grammarNote": "subject" },
+        { "gurmukhi": "ਰੋਟੀ", "romanised": "roti", "meaning": "bread", "grammarNote": "object — before the verb" },
+        { "gurmukhi": "ਖਾਂਦਾ", "romanised": "khanda", "meaning": "eat", "grammarNote": "habitual, masculine — the speaker is male" },
+        { "gurmukhi": "ਹਾਂ", "romanised": "haan", "meaning": "am", "grammarNote": "helper verb — completes the present tense" }
+      ],
+      "note": "The everyday present is a two-part verb: action word with a gender ending (khanda/khandi/khande) + a small helper (haan/hai/ho/han)."
+    },
+    {
+      "type": "grammar",
+      "heading": "Two shapes to learn",
+      "body": "1. The infinitive — \"to do\": verb stem + ਣਾ/ਨਾ (na). jaana = to go, khaana = to eat, bolna = to speak. Use it in sentences like \"I want to learn Punjabi\" or \"kirpa karke bolna\" patterns later.\n\n2. The everyday present — \"I do\": subject + object + verb-with-ending + helper.\n\n   main roti khanda haan — I eat bread (male speaker)\n   main roti khandi haan — (female speaker)\n   tusi roti khande ho — you eat bread (polite)\n\nThe verb ending matches the subject's gender and politeness — bolda/boldi/bolde, not because the action is gendered, but because Punjabi verbs agree with who is doing them."
+    },
+    {
+      "type": "whyThisWay",
+      "heading": "Why is it said this way?",
+      "body": "English hides agreement: \"I eat\", \"you eat\", \"she eats\" barely change. Punjabi verbs wear their subject openly — khand-a vs khand-i tells you the speaker is male or female before you even look up.\n\nIt feels like extra work, but it also means pronouns are often dropped: a Punjabi speaker might just say \"roti khandi haan\" and the verb still tells you who and what gender is eating. You are not memorising endings — you are hearing information English doesn't give you."
+    },
+    {
+      "type": "conversation",
+      "heading": "What do you do?",
+      "conversation": {
+        "title": "Languages and food",
+        "context": "Two learners compare notes over tea.",
+        "lines": [
+          {
+            "speaker": "Simran",
+            "line": {
+              "gurmukhi": "ਕੀ ਤੁਸੀਂ ਪੰਜਾਬੀ ਬੋਲਦੇ ਹੋ?",
+              "romanised": "Ki tusi panjabi bolde ho?",
+              "english": "Do you speak Punjabi?"
+            }
+          },
+          {
+            "speaker": "Gurnaam",
+            "line": {
+              "gurmukhi": "ਹਾਂ, ਮੈਂ ਥੋੜ੍ਹੀ ਬੋਲਦਾ ਹਾਂ। ਤੁਸੀਂ?",
+              "romanised": "Haan, main thorhi bolda haan. Tusi?",
+              "english": "Yes, I speak a little. And you?"
+            }
+          },
+          {
+            "speaker": "Simran",
+            "line": {
+              "gurmukhi": "ਮੈਂ ਵੀ ਥੋੜ੍ਹੀ ਬੋਲਦੀ ਹਾਂ।",
+              "romanised": "Main vi thorhi boldi haan.",
+              "english": "I also speak a little. (boldi — female speaker)"
+            }
+          },
+          {
+            "speaker": "Gurnaam",
+            "line": {
+              "gurmukhi": "ਚਾਹ ਪੀਂਦੇ ਹੋ?",
+              "romanised": "Chaah pinde ho?",
+              "english": "Do you drink tea?"
+            }
+          },
+          {
+            "speaker": "Simran",
+            "line": {
+              "gurmukhi": "ਹਾਂ, ਮੈਂ ਰੋਜ਼ ਚਾਹ ਪੀਂਦੀ ਹਾਂ।",
+              "romanised": "Haan, main roz chaah pindi haan.",
+              "english": "Yes, I drink tea every day."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "exerciseSet",
+      "heading": "Check your understanding",
+      "exercises": [
+        {
+          "type": "multipleChoice",
+          "id": "e_verb_1",
+          "prompt": { "gurmukhi": "ਖਾਣਾ", "romanised": "khaana" },
+          "question": "What does this verb mean?",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "to drink", "english": "to drink" } },
+            { "id": "b", "line": { "gurmukhi": "to eat", "english": "to eat" } },
+            { "id": "c", "line": { "gurmukhi": "to go", "english": "to go" } }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "type": "multipleChoice",
+          "id": "e_verb_2",
+          "prompt": { "gurmukhi": "ਮੈਂ ਪੰਜਾਬੀ ਬੋਲਦੀ ਹਾਂ।", "romanised": "Main panjabi boldi haan." },
+          "question": "Who is most likely speaking?",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "A woman", "english": "A woman" } },
+            { "id": "b", "line": { "gurmukhi": "A man", "english": "A man" } },
+            { "id": "c", "line": { "gurmukhi": "A group", "english": "A group" } }
+          ],
+          "correctOptionId": "a",
+          "explanation": "boldi carries the feminine ending — the verb agrees with the speaker."
+        },
+        {
+          "type": "arrangeWords",
+          "id": "e_verb_3",
+          "prompt": {
+            "gurmukhi": "I drink water (male speaker)",
+            "english": "Build the Punjabi sentence for \"I drink water\""
+          },
+          "tokens": ["ਮੈਂ", "ਪਾਣੀ", "ਪੀਂਦਾ", "ਹਾਂ"],
+          "distractors": ["ਪੀਂਦੀ", "ਤੁਸੀਂ"],
+          "explanation": "main paani pinda haan — object before verb, masculine ending."
+        },
+        {
+          "type": "matchPairs",
+          "id": "e_verb_4",
+          "instructions": "Match each infinitive to its meaning",
+          "pairs": [
+            {
+              "id": "p1",
+              "left": { "gurmukhi": "ਜਾਣਾ", "romanised": "jaana" },
+              "right": { "gurmukhi": "to go", "english": "to go" }
+            },
+            {
+              "id": "p2",
+              "left": { "gurmukhi": "ਦੇਣਾ", "romanised": "dena" },
+              "right": { "gurmukhi": "to give", "english": "to give" }
+            },
+            {
+              "id": "p3",
+              "left": { "gurmukhi": "ਸੁਣਨਾ", "romanised": "sunna" },
+              "right": { "gurmukhi": "to listen", "english": "to listen" }
+            },
+            {
+              "id": "p4",
+              "left": { "gurmukhi": "ਸਮਝਣਾ", "romanised": "samajhna" },
+              "right": { "gurmukhi": "to understand", "english": "to understand" }
+            }
+          ]
+        },
+        {
+          "type": "fillBlank",
+          "id": "e_verb_5",
+          "prompt": {
+            "gurmukhi": "Complete for a female speaker",
+            "english": "Choose the verb form a female speaker uses"
+          },
+          "template": "Main panjabi ___ haan.",
+          "options": [
+            { "id": "a", "line": { "gurmukhi": "ਬੋਲਦਾ", "romanised": "bolda" } },
+            { "id": "b", "line": { "gurmukhi": "ਬੋਲਦੀ", "romanised": "boldi" } },
+            { "id": "c", "line": { "gurmukhi": "ਬੋਲਦੇ", "romanised": "bolde" } }
+          ],
+          "correctOptionId": "b",
+          "explanation": "boldi is the feminine ending — the verb agrees with the speaker's gender."
+        }
+      ]
+    },
+    {
+      "type": "summary",
+      "heading": "Lesson summary",
+      "body": "You know ten everyday verbs and can build your first present-tense sentences.",
+      "keyPoints": [
+        "Infinitive = stem + na: jaana, khaana, bolna, dena…",
+        "Everyday present: subject + object + gendered verb + helper (haan/ho)",
+        "Male speaker → -da endings (bolda), female → -di (boldi), polite you → -de (bolde)",
+        "The verb always comes last — and it reveals who is speaking"
+      ]
+    }
+  ]
+}

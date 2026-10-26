@@ -89,5 +89,36 @@ void main() {
         'a',
       );
     });
+
+    test('every lesson file referenced by course.json parses', () {
+      final course = Course.fromJson(
+        _loadJson('assets/content/courses/beginner_punjabi/course.json'),
+      );
+
+      final refs = course.levels
+          .expand((l) => l.modules)
+          .expand((m) => m.lessons)
+          .toList();
+      expect(refs, isNotEmpty);
+
+      for (final ref in refs) {
+        final file = File('assets/content/${ref.file}');
+        expect(
+          file.existsSync(),
+          isTrue,
+          reason: 'missing lesson file: ${ref.file}',
+        );
+        final lesson = Lesson.fromJson(_loadJson(file.path));
+        expect(lesson.id, ref.id, reason: 'id mismatch in ${ref.file}');
+        expect(lesson.sections, isNotEmpty);
+        // Every lesson must offer practice — the learner cannot finish
+        // without it, so a lesson with zero exercises is a content bug.
+        expect(
+          lesson.sections.whereType<ExerciseSetSection>(),
+          isNotEmpty,
+          reason: '${ref.id} has no exercise set',
+        );
+      }
+    });
   });
 }
