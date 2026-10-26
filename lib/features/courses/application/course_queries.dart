@@ -86,6 +86,17 @@ final lessonStartedProvider = Provider.family<bool, String>(
       ref.watch(lessonProgressMapProvider)[lessonId]?.completed == false,
 );
 
+/// lessonId → lesson title across the whole course.
+final lessonTitleMapProvider = Provider<Map<String, String>>((ref) {
+  final course = ref.watch(courseProvider).value;
+  if (course == null) return const {};
+  return {
+    for (final level in course.levels)
+      for (final module in level.modules)
+        for (final lesson in module.lessons) lesson.id: lesson.title,
+  };
+});
+
 /// The next lesson to study: most recently touched in-progress lesson, else
 /// the first incomplete lesson in course order.
 final nextLessonProvider = Provider<({LessonRef lesson, String moduleTitle})?>((

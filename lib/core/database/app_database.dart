@@ -133,6 +133,30 @@ class AppDatabase extends _$AppDatabase {
     flashcardsTable,
   )..where((t) => t.dueAt.isSmallerOrEqualValue(now))).get();
 
+  /// Every card, oldest first — the vocabulary browser's source.
+  Stream<List<FlashcardsTableData>> watchAllFlashcards() => (select(
+    flashcardsTable,
+  )..orderBy([(t) => OrderingTerm.asc(t.createdAt)])).watch();
+
+  /// Resets a card's scheduling state to a fresh card due immediately.
+  Future<void> resetFlashcard(String id) =>
+      (update(flashcardsTable)..where((t) => t.id.equals(id))).write(
+        FlashcardsTableCompanion(
+          easeFactor: const Value(2.5),
+          intervalDays: const Value(0),
+          repetitions: const Value(0),
+          dueAt: Value(DateTime.now()),
+          lastReviewedAt: const Value(null),
+        ),
+      );
+
+  /// How many ratings this card has received.
+  Future<int> reviewCountFor(String flashcardId) =>
+      (select(reviewRecordsTable)
+            ..where((t) => t.flashcardId.equals(flashcardId)))
+          .get()
+          .then((rows) => rows.length);
+
   Future<void> updateFlashcardSchedule(
     String id, {
     required double easeFactor,

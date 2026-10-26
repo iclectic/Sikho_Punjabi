@@ -51,6 +51,36 @@ void main() {
     });
   });
 
+  group('vocabulary browsing', () {
+    FlashcardsTableCompanion card(String id) => FlashcardsTableCompanion.insert(
+      id: id,
+      lessonId: 'l1',
+      gurmukhi: 'ਹਾਂ',
+      dueAt: DateTime.now().subtract(const Duration(days: 1)),
+      createdAt: DateTime.now(),
+    );
+
+    test('watchAllFlashcards streams all cards', () async {
+      await db.insertFlashcards([card('v1'), card('v2')]);
+      final cards = await db.watchAllFlashcards().first;
+      expect(cards.map((c) => c.id), ['v1', 'v2']);
+    });
+
+    test('resetFlashcard returns a card to fresh scheduling', () async {
+      await db.insertFlashcards([card('v1')]);
+      final c = (await db.dueFlashcards(DateTime.now())).single;
+      await ReviewActions(db).rate(c, ReviewRating.easy);
+
+      await db.resetFlashcard('v1');
+      final reset = (await db.watchAllFlashcards().first).single;
+      expect(reset.repetitions, 0);
+      expect(reset.intervalDays, 0);
+      expect(reset.easeFactor, 2.5);
+      expect(reset.lastReviewedAt, isNull);
+      expect(reset.dueAt.isBefore(DateTime.now()), isTrue);
+    });
+  });
+
   group('flashcard review flow', () {
     test('rating a card updates schedule and writes a record', () async {
       await db.insertFlashcards([

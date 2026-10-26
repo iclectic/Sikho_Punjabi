@@ -8,6 +8,7 @@ import '../../../core/theme/app_tokens.dart';
 import '../../courses/application/course_queries.dart';
 import '../../progress/application/study_stats_provider.dart';
 import '../../review/application/review_providers.dart';
+import '../../vocabulary/application/vocabulary_providers.dart';
 
 /// Home dashboard: greeting, key stats, continue-learning, review, and a link
 /// into the full course browser.
@@ -59,6 +60,8 @@ class LearnScreen extends ConsumerWidget {
                 onTap: () => context.push(AppRoutes.course),
               ),
             ),
+            const SizedBox(height: AppSpacing.md),
+            const _VocabularyCard(),
           ],
         ),
       ),
@@ -185,6 +188,27 @@ class _ReviewCard extends ConsumerWidget {
         ),
         trailing: dueCount == 0 ? null : const Icon(Icons.chevron_right),
         onTap: () => context.go(AppRoutes.review),
+      ),
+    );
+  }
+}
+
+class _VocabularyCard extends ConsumerWidget {
+  const _VocabularyCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final count = ref.watch(flashcardCountProvider);
+
+    return Card(
+      child: ListTile(
+        leading: const Icon(Icons.menu_book_outlined),
+        title: const Text('Vocabulary'),
+        subtitle: Text(
+          count == 0 ? 'Words you learn will appear here' : '$count words',
+        ),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () => context.push(AppRoutes.vocabulary),
       ),
     );
   }

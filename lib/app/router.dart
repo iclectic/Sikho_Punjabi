@@ -13,6 +13,7 @@ import '../features/onboarding/presentation/onboarding_screen.dart';
 import '../features/progress/presentation/progress_screen.dart';
 import '../features/review/presentation/review_screen.dart';
 import '../features/settings/presentation/settings_screen.dart';
+import '../features/vocabulary/presentation/vocabulary_screen.dart';
 
 abstract final class AppRoutes {
   static const onboarding = '/onboarding';
@@ -22,6 +23,7 @@ abstract final class AppRoutes {
   static const progress = '/progress';
   static const settings = '/settings';
   static const course = '/learn/course';
+  static const vocabulary = '/learn/vocabulary';
   static String level(String levelId) => '/learn/level/$levelId';
   static String module(String moduleId) => '/learn/module/$moduleId';
   static String lesson(String lessonId) => '/learn/lesson/$lessonId';
@@ -59,6 +61,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                   GoRoute(
                     path: 'course',
                     builder: (context, state) => const CourseScreen(),
+                  ),
+                  GoRoute(
+                    path: 'vocabulary',
+                    builder: (context, state) => const VocabularyScreen(),
                   ),
                   GoRoute(
                     path: 'level/:levelId',

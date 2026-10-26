@@ -10,6 +10,7 @@ import 'package:sikho_punjabi/features/exercises/application/exercise_providers.
 import 'package:sikho_punjabi/features/progress/application/lesson_progress_provider.dart';
 import 'package:sikho_punjabi/features/progress/application/study_stats_provider.dart';
 import 'package:sikho_punjabi/features/review/application/review_providers.dart';
+import 'package:sikho_punjabi/features/vocabulary/application/vocabulary_providers.dart';
 
 void main() {
   Future<void> pumpApp(WidgetTester tester) async {
@@ -31,6 +32,9 @@ void main() {
           ),
           studySessionsProvider.overrideWith(
             (ref) => Stream.value(const <StudySessionsTableData>[]),
+          ),
+          allFlashcardsProvider.overrideWith(
+            (ref) => Stream.value(const <FlashcardsTableData>[]),
           ),
           exerciseResultsProvider.overrideWith(
             (ref, lessonId) => Stream.value(const <String, bool>{}),
