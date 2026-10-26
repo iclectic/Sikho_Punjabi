@@ -8,6 +8,7 @@ import '../../../content/models/lesson.dart';
 import '../../../content/models/vocabulary_item.dart';
 import '../../../core/database/app_database.dart';
 import '../../../core/theme/app_tokens.dart';
+import '../../exercises/application/exercise_providers.dart';
 import '../../review/application/review_providers.dart';
 import 'widgets/section_views.dart';
 
@@ -90,6 +91,17 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
         }
 
         final isLast = _index == lesson.sections.length - 1;
+        final exerciseIds = lesson.sections
+            .whereType<ExerciseSetSection>()
+            .expand((s) => s.exercises.map((e) => e.id))
+            .toList(growable: false);
+        final exercisesDone = ref.watch(
+          allExercisesCorrectProvider((
+            lessonId: lesson.id,
+            exerciseIds: exerciseIds,
+          )),
+        );
+
         return Scaffold(
           appBar: AppBar(
             title: Text(lesson.title),
@@ -112,32 +124,49 @@ class _LessonScreenState extends ConsumerState<LessonScreen> {
                   physics: const NeverScrollableScrollPhysics(),
                   onPageChanged: (i) => _onPageChanged(i, lesson, db),
                   itemCount: lesson.sections.length,
-                  itemBuilder: (context, i) =>
-                      SectionView(section: lesson.sections[i]),
+                  itemBuilder: (context, i) => SectionView(
+                    lessonId: lesson.id,
+                    section: lesson.sections[i],
+                  ),
                 ),
               ),
               SafeArea(
                 child: Padding(
                   padding: AppSpacing.screenPadding,
-                  child: Row(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      if (_index > 0)
-                        OutlinedButton(
-                          onPressed: () => _pageController.previousPage(
-                            duration: AppDurations.normal,
-                            curve: Curves.easeOut,
+                      if (isLast && !exercisesDone)
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: AppSpacing.sm),
+                          child: Text(
+                            'Answer every exercise correctly to finish this lesson.',
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
-                          child: const Text('Back'),
                         ),
-                      const Spacer(),
-                      FilledButton(
-                        onPressed: isLast
-                            ? () => _finish(lesson, db)
-                            : () => _pageController.nextPage(
+                      Row(
+                        children: [
+                          if (_index > 0)
+                            OutlinedButton(
+                              onPressed: () => _pageController.previousPage(
                                 duration: AppDurations.normal,
                                 curve: Curves.easeOut,
                               ),
-                        child: Text(isLast ? 'Finish lesson' : 'Continue'),
+                              child: const Text('Back'),
+                            ),
+                          const Spacer(),
+                          FilledButton(
+                            onPressed: isLast
+                                ? (exercisesDone
+                                      ? () => _finish(lesson, db)
+                                      : null)
+                                : () => _pageController.nextPage(
+                                    duration: AppDurations.normal,
+                                    curve: Curves.easeOut,
+                                  ),
+                            child: Text(isLast ? 'Finish lesson' : 'Continue'),
+                          ),
+                        ],
                       ),
                     ],
                   ),

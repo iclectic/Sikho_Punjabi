@@ -27,6 +27,30 @@ void main() {
     });
   });
 
+  group('exercise results', () {
+    test('latest result wins and streams per lesson', () async {
+      await db.saveExerciseResult(
+        lessonId: 'l1',
+        exerciseId: 'e1',
+        correct: false,
+      );
+      await db.saveExerciseResult(
+        lessonId: 'l1',
+        exerciseId: 'e1',
+        correct: true,
+      );
+      await db.saveExerciseResult(
+        lessonId: 'l2',
+        exerciseId: 'e9',
+        correct: true,
+      );
+
+      final l1 = await db.watchExerciseResults('l1').first;
+      expect(l1.single.exerciseId, 'e1');
+      expect(l1.single.correct, isTrue);
+    });
+  });
+
   group('flashcard review flow', () {
     test('rating a card updates schedule and writes a record', () async {
       await db.insertFlashcards([

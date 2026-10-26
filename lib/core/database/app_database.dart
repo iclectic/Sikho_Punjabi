@@ -52,12 +52,25 @@ class StudySessionsTable extends Table {
   IntColumn get durationSeconds => integer().withDefault(const Constant(0))();
 }
 
+/// Latest answer state per exercise, per lesson. One row per
+/// (lessonId, exerciseId) — the most recent attempt overwrites the last.
+class ExerciseResultsTable extends Table {
+  TextColumn get lessonId => text()();
+  TextColumn get exerciseId => text()();
+  BoolColumn get correct => boolean()();
+  DateTimeColumn get answeredAt => dateTime()();
+
+  @override
+  Set<Column> get primaryKey => {lessonId, exerciseId};
+}
+
 @DriftDatabase(
   tables: [
     LessonProgressTable,
     FlashcardsTable,
     ReviewRecordsTable,
     StudySessionsTable,
+    ExerciseResultsTable,
   ],
 )
 class AppDatabase extends _$AppDatabase {
@@ -65,7 +78,16 @@ class AppDatabase extends _$AppDatabase {
     : super(executor ?? driftDatabase(name: 'sikho_punjabi'));
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
+
+  @override
+  MigrationStrategy get migration => MigrationStrategy(
+    onUpgrade: (migrator, from, to) async {
+      if (from < 2) {
+        await migrator.createTable(exerciseResultsTable);
+      }
+    },
+  );
 
   // ---- Lesson progress ----
 
@@ -138,6 +160,27 @@ class AppDatabase extends _$AppDatabase {
           reviewedAt: DateTime.now(),
         ),
       );
+
+  // ---- Exercise results ----
+
+  Stream<List<ExerciseResultsTableData>> watchExerciseResults(
+    String lessonId,
+  ) => (select(
+    exerciseResultsTable,
+  )..where((t) => t.lessonId.equals(lessonId))).watch();
+
+  Future<void> saveExerciseResult({
+    required String lessonId,
+    required String exerciseId,
+    required bool correct,
+  }) => into(exerciseResultsTable).insertOnConflictUpdate(
+    ExerciseResultsTableCompanion.insert(
+      lessonId: lessonId,
+      exerciseId: exerciseId,
+      correct: correct,
+      answeredAt: DateTime.now(),
+    ),
+  );
 
   // ---- Study sessions ----
 

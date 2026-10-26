@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sikho_punjabi/app/app.dart';
 import 'package:sikho_punjabi/core/database/app_database.dart';
 import 'package:sikho_punjabi/core/prefs/preferences_provider.dart';
+import 'package:sikho_punjabi/features/exercises/application/exercise_providers.dart';
 import 'package:sikho_punjabi/features/progress/application/lesson_progress_provider.dart';
 import 'package:sikho_punjabi/features/progress/application/study_stats_provider.dart';
 import 'package:sikho_punjabi/features/review/application/review_providers.dart';
@@ -30,6 +31,9 @@ void main() {
           ),
           studySessionsProvider.overrideWith(
             (ref) => Stream.value(const <StudySessionsTableData>[]),
+          ),
+          exerciseResultsProvider.overrideWith(
+            (ref, lessonId) => Stream.value(const <String, bool>{}),
           ),
         ],
         child: const SikhoPunjabiApp(),

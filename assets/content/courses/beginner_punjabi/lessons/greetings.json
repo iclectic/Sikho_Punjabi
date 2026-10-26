@@ -302,6 +302,34 @@
           "correctOptionId": "b"
         },
         {
+          "type": "matchPairs",
+          "id": "e_greet_5",
+          "instructions": "Match each Punjabi phrase to its meaning",
+          "pairs": [
+            {
+              "id": "p1",
+              "left": { "gurmukhi": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", "romanised": "sat sri akal" },
+              "right": { "gurmukhi": "hello", "english": "hello" }
+            },
+            {
+              "id": "p2",
+              "left": { "gurmukhi": "ਧੰਨਵਾਦ", "romanised": "dhannvaad" },
+              "right": { "gurmukhi": "thank you", "english": "thank you" }
+            },
+            {
+              "id": "p3",
+              "left": { "gurmukhi": "ਫਿਰ ਮਿਲਾਂਗੇ", "romanised": "phir milaange" },
+              "right": { "gurmukhi": "see you again", "english": "see you again" }
+            },
+            {
+              "id": "p4",
+              "left": { "gurmukhi": "ਨਹੀਂ", "romanised": "nahin" },
+              "right": { "gurmukhi": "no", "english": "no" }
+            }
+          ],
+          "explanation": "These are the core courtesy phrases from this lesson."
+        },
+        {
           "type": "typeTranslation",
           "id": "e_greet_4",
           "prompt": {

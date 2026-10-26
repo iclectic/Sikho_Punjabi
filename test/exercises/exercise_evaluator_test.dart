@@ -77,6 +77,44 @@ void main() {
       );
     });
 
+    test('matchPairs: all pairs must be correctly paired', () {
+      const exercise = Exercise.matchPairs(
+        id: 'e5',
+        instructions: 'match',
+        pairs: [
+          MatchPair(
+            id: 'p1',
+            left: PunjabiLine(gurmukhi: 'ਹਾਂ'),
+            right: PunjabiLine(gurmukhi: 'yes'),
+          ),
+          MatchPair(
+            id: 'p2',
+            left: PunjabiLine(gurmukhi: 'ਨਹੀਂ'),
+            right: PunjabiLine(gurmukhi: 'no'),
+          ),
+        ],
+      );
+
+      expect(
+        evaluator.evaluate(
+          exercise,
+          const PairingAnswer({'p1': 'p1', 'p2': 'p2'}),
+        ),
+        isTrue,
+      );
+      expect(
+        evaluator.evaluate(
+          exercise,
+          const PairingAnswer({'p1': 'p2', 'p2': 'p1'}),
+        ),
+        isFalse,
+      );
+      expect(
+        evaluator.evaluate(exercise, const PairingAnswer({'p1': 'p1'})),
+        isFalse,
+      );
+    });
+
     test('mismatched answer type is false', () {
       const exercise = Exercise.multipleChoice(
         id: 'e4',

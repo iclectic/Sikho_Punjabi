@@ -9,8 +9,9 @@ import '../../../exercises/presentation/exercise_runner.dart';
 
 /// Renders any [LessonSection] as a scrollable page inside the lesson player.
 class SectionView extends StatelessWidget {
-  const SectionView({required this.section, super.key});
+  const SectionView({required this.lessonId, required this.section, super.key});
 
+  final String lessonId;
   final LessonSection section;
 
   @override
@@ -106,7 +107,9 @@ class SectionView extends StatelessWidget {
                 ),
               ),
           ],
-          ExerciseSetSection s => [ExerciseRunner(exercises: s.exercises)],
+          ExerciseSetSection s => [
+            ExerciseRunner(lessonId: lessonId, exercises: s.exercises),
+          ],
           SummarySection s => [
             Text(s.body, style: _body(context)),
             const SizedBox(height: AppSpacing.md),
