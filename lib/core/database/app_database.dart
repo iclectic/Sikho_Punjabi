@@ -176,6 +176,11 @@ class AppDatabase extends _$AppDatabase {
     );
   }
 
+  /// Every self-rating ever recorded — feeds review statistics.
+  Stream<List<ReviewRecordsTableData>> watchReviewRecords() => (select(
+    reviewRecordsTable,
+  )..orderBy([(t) => OrderingTerm.desc(t.reviewedAt)])).watch();
+
   Future<void> recordReview(String flashcardId, int rating) =>
       into(reviewRecordsTable).insert(
         ReviewRecordsTableCompanion.insert(

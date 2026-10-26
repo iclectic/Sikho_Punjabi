@@ -2,18 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../content/content_repository.dart';
-import '../../../core/database/app_database.dart';
 import '../../../core/theme/app_tokens.dart';
+import '../../review/application/review_providers.dart';
+import '../../vocabulary/application/vocabulary_providers.dart';
 import '../application/lesson_progress_provider.dart';
 import '../application/study_stats_provider.dart';
-
-final _flashcardCountProvider = StreamProvider<int>(
-  (ref) => ref
-      .watch(appDatabaseProvider)
-      .select(ref.watch(appDatabaseProvider).flashcardsTable)
-      .watch()
-      .map((rows) => rows.length),
-);
 
 /// Honest progress stats — no streak-shaming, just useful numbers.
 class ProgressScreen extends ConsumerWidget {
@@ -24,7 +17,9 @@ class ProgressScreen extends ConsumerWidget {
     final course = ref.watch(courseProvider).value;
     final progress = ref.watch(lessonProgressListProvider).value ?? [];
     final stats = ref.watch(studyStatsProvider);
-    final vocabCount = ref.watch(_flashcardCountProvider).value ?? 0;
+    final vocabCount = ref.watch(allFlashcardsProvider).value?.length ?? 0;
+    final reviewStats = ref.watch(reviewStatsProvider);
+    final forecast = ref.watch(dueForecastProvider);
 
     final total = course == null
         ? 0
@@ -54,6 +49,23 @@ class ProgressScreen extends ConsumerWidget {
             icon: Icons.style,
             label: 'Words in review',
             value: '$vocabCount',
+          ),
+          _StatTile(
+            icon: Icons.fact_check_outlined,
+            label: 'Reviews completed',
+            value: '${reviewStats.total}',
+          ),
+          _StatTile(
+            icon: Icons.psychology_outlined,
+            label: 'Recall rate',
+            value: reviewStats.total == 0
+                ? '—'
+                : '${(reviewStats.successRate * 100).round()}%',
+          ),
+          _StatTile(
+            icon: Icons.event_repeat,
+            label: 'Due this week',
+            value: '${forecast.fold<int>(0, (sum, n) => sum + n)} cards',
           ),
           _StatTile(
             icon: Icons.calendar_month,

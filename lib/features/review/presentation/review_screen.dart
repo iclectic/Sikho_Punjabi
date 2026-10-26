@@ -30,26 +30,32 @@ class ReviewScreen extends ConsumerWidget {
   }
 }
 
-class _EmptyReview extends StatelessWidget {
+class _EmptyReview extends ConsumerWidget {
   const _EmptyReview();
 
   @override
-  Widget build(BuildContext context) {
-    return const Center(
+  Widget build(BuildContext context, WidgetRef ref) {
+    final forecast = ref.watch(dueForecastProvider);
+    final upcoming = forecast.skip(1).fold<int>(0, (sum, n) => sum + n);
+    final nextDay = forecast.indexWhere((n) => n > 0);
+
+    return Center(
       child: Padding(
         padding: AppSpacing.screenPadding,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.check_circle_outline, size: 56),
-            SizedBox(height: AppSpacing.md),
-            Text(
+            const Icon(Icons.check_circle_outline, size: 56),
+            const SizedBox(height: AppSpacing.md),
+            const Text(
               'Nothing due right now',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
-            SizedBox(height: AppSpacing.sm),
+            const SizedBox(height: AppSpacing.sm),
             Text(
-              'Flashcards appear here after you study a lesson\'s vocabulary.',
+              upcoming == 0
+                  ? 'Flashcards appear here after you study a lesson\'s vocabulary.'
+                  : 'Next: ${forecast[nextDay]} card${forecast[nextDay] == 1 ? '' : 's'} ${_dayLabel(nextDay)} — $upcoming due this week.',
               textAlign: TextAlign.center,
             ),
           ],
@@ -57,6 +63,12 @@ class _EmptyReview extends StatelessWidget {
       ),
     );
   }
+
+  static String _dayLabel(int offset) => switch (offset) {
+    0 => 'today',
+    1 => 'tomorrow',
+    _ => 'in $offset days',
+  };
 }
 
 class _ReviewSession extends ConsumerStatefulWidget {
@@ -71,12 +83,14 @@ class _ReviewSession extends ConsumerStatefulWidget {
 class _ReviewSessionState extends ConsumerState<_ReviewSession> {
   int _index = 0;
   bool _revealed = false;
+  final _ratings = <ReviewRating>[];
 
   Future<void> _rate(ReviewRating rating) async {
     final card = widget.cards[_index];
     await ref.read(reviewActionsProvider).rate(card, rating);
     if (!mounted) return;
     setState(() {
+      _ratings.add(rating);
       _revealed = false;
       _index++;
     });
@@ -85,7 +99,7 @@ class _ReviewSessionState extends ConsumerState<_ReviewSession> {
   @override
   Widget build(BuildContext context) {
     if (_index >= widget.cards.length) {
-      return const _EmptyReview();
+      return _SessionSummary(ratings: _ratings);
     }
     final card = widget.cards[_index];
     final line = PunjabiLine(
@@ -163,4 +177,58 @@ class _ReviewSessionState extends ConsumerState<_ReviewSession> {
       ),
     );
   }
+}
+
+/// End-of-session recap: cards worked through, per-rating counts, and a
+/// recall-rate proxy so the learner sees honest feedback, not a score chase.
+class _SessionSummary extends StatelessWidget {
+  const _SessionSummary({required this.ratings});
+
+  final List<ReviewRating> ratings;
+
+  @override
+  Widget build(BuildContext context) {
+    final counts = {for (final r in ReviewRating.values) r: 0};
+    for (final r in ratings) {
+      counts[r] = counts[r]! + 1;
+    }
+    final remembered = counts[ReviewRating.good]! + counts[ReviewRating.easy]!;
+
+    return Center(
+      child: Padding(
+        padding: AppSpacing.screenPadding,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.celebration_outlined, size: 56),
+            const SizedBox(height: AppSpacing.md),
+            Text(
+              'Session complete',
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            const SizedBox(height: AppSpacing.sm),
+            Text(
+              '${ratings.length} card${ratings.length == 1 ? '' : 's'} reviewed — '
+              '$remembered remembered well',
+            ),
+            const SizedBox(height: AppSpacing.lg),
+            Wrap(
+              spacing: AppSpacing.sm,
+              children: [
+                for (final rating in ReviewRating.values)
+                  Chip(label: Text('${_label(rating)}: ${counts[rating]}')),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  static String _label(ReviewRating rating) => switch (rating) {
+    ReviewRating.again => 'Again',
+    ReviewRating.hard => 'Hard',
+    ReviewRating.good => 'Good',
+    ReviewRating.easy => 'Easy',
+  };
 }

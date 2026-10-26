@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../content/models/lesson.dart';
 import '../../../core/database/app_database.dart';
+import '../../vocabulary/application/vocabulary_providers.dart';
 import '../domain/srs_scheduler.dart';
 
 /// Watches cards due for review right now.
@@ -69,3 +70,51 @@ class ReviewActions {
 final reviewActionsProvider = Provider<ReviewActions>(
   (ref) => ReviewActions(ref.watch(appDatabaseProvider)),
 );
+
+/// Aggregate review statistics across all time.
+class ReviewStats {
+  const ReviewStats({required this.total, required this.byRating});
+
+  final int total;
+  final Map<ReviewRating, int> byRating;
+
+  /// Share of ratings that were Good or Easy — a rough recall proxy.
+  double get successRate => total == 0
+      ? 0
+      : ((byRating[ReviewRating.good] ?? 0) +
+                (byRating[ReviewRating.easy] ?? 0)) /
+            total;
+}
+
+final reviewStatsProvider = Provider<ReviewStats>((ref) {
+  final records =
+      ref.watch(reviewRecordsProvider).value ??
+      const <ReviewRecordsTableData>[];
+  final byRating = <ReviewRating, int>{};
+  for (final record in records) {
+    final rating = ReviewRating.fromValue(record.rating);
+    byRating[rating] = (byRating[rating] ?? 0) + 1;
+  }
+  return ReviewStats(total: records.length, byRating: byRating);
+});
+
+/// Every recorded self-rating, newest first.
+final reviewRecordsProvider = StreamProvider<List<ReviewRecordsTableData>>(
+  (ref) => ref.watch(appDatabaseProvider).watchReviewRecords(),
+);
+
+/// Cards becoming due over the next 7 days, indexed by offset from today.
+/// Index 0 includes everything already overdue.
+final dueForecastProvider = Provider<List<int>>((ref) {
+  final cards =
+      ref.watch(allFlashcardsProvider).value ?? const <FlashcardsTableData>[];
+  final counts = List<int>.filled(7, 0);
+  final today = DateTime.now();
+  final startOfToday = DateTime(today.year, today.month, today.day);
+  for (final card in cards) {
+    var day = card.dueAt.difference(startOfToday).inDays;
+    if (day < 0) day = 0; // overdue counts as today
+    if (day < counts.length) counts[day]++;
+  }
+  return counts;
+});
