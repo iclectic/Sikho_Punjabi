@@ -38,8 +38,9 @@ assets/content/   # versioned course JSON + gurmukhi table
 `Course → Level → Module → LessonRef → Lesson(JSON file) → LessonSection`.
 Section types: `intro`, `vocabulary`, `examples`, `breakdown`, `grammar`,
 `whyThisWay`, `conversation`, `exerciseSet`, `summary`.
-Exercise types: `multipleChoice`, `arrangeWords`, `fillBlank`, `matchPairs`
-(model only — UI pending), `typeTranslation`.
+Exercise types: `multipleChoice`, `arrangeWords`, `fillBlank`, `matchPairs`,
+`listening` (audio prompt; transcript fallback until recordings exist),
+`typeTranslation`.
 
 **Every Punjabi string is unverified sample content** — marked
 `verificationStatus: "unverified"` in JSON. Native-speaker review must clear
@@ -52,8 +53,20 @@ this flag before release. Never treat the bundled JSON as linguistically final.
 - Format: `dart format .`
 - Regenerate code after editing models/DB: `dart run build_runner build --delete-conflicting-outputs`
 
+## Offline & persistence
+
+- The app is fully offline: all content is bundled JSON, all progress lives in
+  Drift, no network imports exist in `lib/`. Keep it that way until Phase 11.
+- DB is at schema v2. Migration tests construct an old-version DB with raw
+  `sqlite3` (dev dep), set `PRAGMA user_version`, then open `AppDatabase` on
+  `NativeDatabase.opened(raw)` — see `test/database/migration_test.dart`.
+- Drift stream providers need an active `container.listen` before `.future`
+  emits in unit tests. `ref.read` inside `dispose()` is unsafe — capture
+  services in `initState`. `Duration.inDays` truncates toward zero and
+  `subtract(Duration(days:))` is DST-unsafe — use calendar arithmetic.
+
 ## Not yet built (by design)
 
-Onboarding flow, match-pairs UI, audio playback (service exists; no recorded
-assets), listening/speaking exercises, accounts/sync, AI tutor. Do not present
+Real audio recordings (playback works when files land in `assets/audio/`),
+accounts/sync, AI tutor, speaking/speech recognition. Do not present
 placeholders as finished features.

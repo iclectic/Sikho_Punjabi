@@ -54,6 +54,7 @@ dev_dependencies:
   freezed: ^4.0.3
   json_serializable: ^6.15.2
   mocktail: ^1.0.5
+  sqlite3: ^3.8.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
