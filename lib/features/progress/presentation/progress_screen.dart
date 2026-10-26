@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../content/content_repository.dart';
 import '../../../core/database/app_database.dart';
 import '../../../core/theme/app_tokens.dart';
-import '../../learn/presentation/learn_screen.dart';
+import '../application/lesson_progress_provider.dart';
 import '../application/study_stats_provider.dart';
 
 final _flashcardCountProvider = StreamProvider<int>(

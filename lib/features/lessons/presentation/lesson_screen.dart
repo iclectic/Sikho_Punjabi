@@ -25,14 +25,21 @@ class LessonScreen extends ConsumerStatefulWidget {
 class _LessonScreenState extends ConsumerState<LessonScreen> {
   final _pageController = PageController();
   late final DateTime _startedAt = DateTime.now();
+  // Captured in initState — ref must not be used inside dispose().
+  late final AppDatabase _db;
   int _index = 0;
   bool _restored = false;
 
   @override
+  void initState() {
+    super.initState();
+    _db = ref.read(appDatabaseProvider);
+  }
+
+  @override
   void dispose() {
-    final db = ref.read(appDatabaseProvider);
     unawaited(
-      db.logStudySession(
+      _db.logStudySession(
         lessonId: widget.lessonId,
         startedAt: _startedAt,
         durationSeconds: DateTime.now().difference(_startedAt).inSeconds,

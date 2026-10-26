@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../features/courses/presentation/course_screen.dart';
+import '../features/courses/presentation/level_screen.dart';
+import '../features/courses/presentation/module_screen.dart';
 import '../features/gurmukhi/presentation/gurmukhi_screen.dart';
 import '../features/learn/presentation/learn_screen.dart';
 import '../features/lessons/presentation/lesson_screen.dart';
@@ -18,6 +21,9 @@ abstract final class AppRoutes {
   static const gurmukhi = '/gurmukhi';
   static const progress = '/progress';
   static const settings = '/settings';
+  static const course = '/learn/course';
+  static String level(String levelId) => '/learn/level/$levelId';
+  static String module(String moduleId) => '/learn/module/$moduleId';
   static String lesson(String lessonId) => '/learn/lesson/$lessonId';
 }
 
@@ -50,6 +56,21 @@ final appRouterProvider = Provider<GoRouter>((ref) {
                 path: AppRoutes.learn,
                 builder: (context, state) => const LearnScreen(),
                 routes: [
+                  GoRoute(
+                    path: 'course',
+                    builder: (context, state) => const CourseScreen(),
+                  ),
+                  GoRoute(
+                    path: 'level/:levelId',
+                    builder: (context, state) =>
+                        LevelScreen(levelId: state.pathParameters['levelId']!),
+                  ),
+                  GoRoute(
+                    path: 'module/:moduleId',
+                    builder: (context, state) => ModuleScreen(
+                      moduleId: state.pathParameters['moduleId']!,
+                    ),
+                  ),
                   GoRoute(
                     path: 'lesson/:lessonId',
                     parentNavigatorKey: rootNavigatorKey,

@@ -68,6 +68,7 @@ flutter:
 
   assets:
     - assets/content/courses/beginner_punjabi/
+    - assets/content/courses/beginner_punjabi/lessons/
     - assets/content/gurmukhi/
 
   # To add assets to your application, add an assets section, like this:
